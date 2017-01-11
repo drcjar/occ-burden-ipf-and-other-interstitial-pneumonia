@@ -1,0 +1,127 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/home/drcjar/Documents/TaskForce/metaanalysis/metaanalysis.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}11 Oct 2016, 17:27:37
+
+{com}. import delimited /home/drcjar/Documents/TaskForce/metaanalysis/any_dust.csv
+{res}{text}(3 vars, 6 obs)
+
+{com}. metan or cilow ciup
+
+{txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+1{col 22}|{res}  1.320{col 35}  0.840     2.040{col 60} 26.87
+{txt}2{col 22}|{res}  2.370{col 35}  0.670     8.440{col 60}  0.64
+{txt}3{col 22}|{res}  5.610{col 35}  2.120    17.890{col 60}  0.16
+{txt}4{col 22}|{res}  1.100{col 35}  0.710     1.720{col 60} 37.93
+{txt}5{col 22}|{res}  1.200{col 35}  0.800     1.900{col 60} 31.98
+{txt}6{col 22}|{res}  2.800{col 35}  1.500     5.500{col 60}  2.42
+{txt}---------------------+---------------------------------------------------
+I-V pooled ES{col 22}|{res}  1.247{col 35}  0.936     1.558{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+ Heterogeneity calculated by formula
+  Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
+where variance_i = ((upper limit - lower limit)/(2*z))^2 
+
+  Heterogeneity chi-squared = {res}  4.22{txt} (d.f. = {res}5{txt}) p = {res}0.518
+{txt}  I-squared (variation in ES attributable to heterogeneity) ={res}   0.0%
+
+{txt}  Test of ES=0 : z= {res}  7.86{txt} p = {res}0.000
+
+{com}. import delimited /home/drcjar/Documents/TaskForce/metaanalysis/metal_dust.csv, clear 
+{res}{text}(3 vars, 11 obs)
+
+{com}. metan or cilow ciup
+
+{txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+1{col 22}|{res} 10.970{col 35}  2.300    52.400{col 60}  0.01
+{txt}2{col 22}|{res}  1.340{col 35}  1.140     1.590{col 60} 64.04
+{txt}3{col 22}|{res}  1.680{col 35}  1.070     2.650{col 60}  5.19
+{txt}4{col 22}|{res}  1.080{col 35}  0.440     2.650{col 60}  2.66
+{txt}5{col 22}|{res}  2.000{col 35}  1.000     4.000{col 60}  1.44
+{txt}6{col 22}|{res}  9.550{col 35}  1.680   181.120{col 60}  0.00
+{txt}7{col 22}|{res}  0.900{col 35}  0.510     1.590{col 60} 11.12
+{txt}8{col 22}|{res}  1.900{col 35}  1.100     3.100{col 60}  3.24
+{txt}9{col 22}|{res}  2.400{col 35}  1.300     4.000{col 60}  1.78
+{txt}10{col 22}|{res}  1.580{col 35}  0.690     3.610{col 60}  1.52
+{txt}11{col 22}|{res}  1.100{col 35}  0.600     1.800{col 60}  9.01
+{txt}---------------------+---------------------------------------------------
+I-V pooled ES{col 22}|{res}  1.331{col 35}  1.151     1.511{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+ Heterogeneity calculated by formula
+  Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
+where variance_i = ((upper limit - lower limit)/(2*z))^2 
+
+  Heterogeneity chi-squared = {res}  9.10{txt} (d.f. = {res}10{txt}) p = {res}0.523
+{txt}  I-squared (variation in ES attributable to heterogeneity) ={res}   0.0%
+
+{txt}  Test of ES=0 : z= {res} 14.49{txt} p = {res}0.000
+
+{com}. import delimited /home/drcjar/Documents/TaskForce/metaanalysis/wood_dust.csv, clear 
+{res}{text}(3 vars, 5 obs)
+
+{com}. metan or cilow ciup
+
+{txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+1{col 22}|{res}  2.940{col 35}  0.870     9.900{col 60}  1.45
+{txt}2{col 22}|{res}  1.710{col 35}  1.010     2.920{col 60} 32.31
+{txt}3{col 22}|{res}  3.300{col 35}  0.420    25.800{col 60}  0.18
+{txt}4{col 22}|{res}  1.600{col 35}  0.800     3.300{col 60} 18.86
+{txt}5{col 22}|{res}  1.200{col 35}  0.650     2.230{col 60} 47.21
+{txt}---------------------+---------------------------------------------------
+I-V pooled ES{col 22}|{res}  1.469{col 35}  0.926     2.012{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+ Heterogeneity calculated by formula
+  Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
+where variance_i = ((upper limit - lower limit)/(2*z))^2 
+
+  Heterogeneity chi-squared = {res}  1.22{txt} (d.f. = {res}4{txt}) p = {res}0.875
+{txt}  I-squared (variation in ES attributable to heterogeneity) ={res}   0.0%
+
+{txt}  Test of ES=0 : z= {res}  5.30{txt} p = {res}0.000
+
+{com}. import delimited /home/drcjar/Documents/TaskForce/metaanalysis/agricultural_dust.csv, clear 
+{res}{text}(3 vars, 7 obs)
+
+{com}. metan or cilow ciup
+
+{txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+1{col 22}|{res} 10.890{col 35}  1.240    96.000{col 60}  0.01
+{txt}2{col 22}|{res}  3.010{col 35}  1.290     7.430{col 60}  2.27
+{txt}3{col 22}|{res}  2.700{col 35}  1.300     5.500{col 60}  4.85
+{txt}4{col 22}|{res}  1.600{col 35}  1.000     2.500{col 60} 37.99
+{txt}5{col 22}|{res}  0.550{col 35}  0.160     1.890{col 60} 28.56
+{txt}6{col 22}|{res}  1.000{col 35}  0.440     2.280{col 60} 25.25
+{txt}7{col 22}|{res}  3.340{col 35}  1.170    10.120{col 60}  1.07
+{txt}---------------------+---------------------------------------------------
+I-V pooled ES{col 22}|{res}  1.253{col 35}  0.791     1.716{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+ Heterogeneity calculated by formula
+  Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
+where variance_i = ((upper limit - lower limit)/(2*z))^2 
+
+  Heterogeneity chi-squared = {res}  7.73{txt} (d.f. = {res}6{txt}) p = {res}0.259
+{txt}  I-squared (variation in ES attributable to heterogeneity) ={res}  22.3%
+
+{txt}  Test of ES=0 : z= {res}  5.31{txt} p = {res}0.000
+
+{com}. save "/home/drcjar/Documents/TaskForce/metaanalysis/metaanalysis.dta"
+{txt}file /home/drcjar/Documents/TaskForce/metaanalysis/metaanalysis.dta saved
+
+{com}. log using "/home/drcjar/Documents/TaskForce/metaanalysis/metaanalysis.smcl"
+{err}log file already open
+{txt}{search r(604), local:r(604);}
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/home/drcjar/Documents/TaskForce/metaanalysis/metaanalysis.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}14 Oct 2016, 22:50:52
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

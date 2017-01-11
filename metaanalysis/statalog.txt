@@ -1,0 +1,125 @@
+-------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /home/drcjar/Documents/TaskForce/metaanalysis/metaanalysis14_10_16
+> .smcl
+  log type:  smcl
+ opened on:  14 Oct 2016, 23:00:10
+
+. import delimited /home/drcjar/Documents/TaskForce/metaanalysis/any_dust.csv
+(3 vars, 7 obs)
+
+. metan or cilow ciup
+
+           Study     |     ES    [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+1                    |  1.320       0.840     2.040         24.32
+2                    |  2.000       1.160     3.080          9.50
+3                    |  2.370       0.670     8.440          0.58
+4                    |  5.610       2.120    17.890          0.14
+5                    |  1.100       0.710     1.720         34.33
+6                    |  1.200       0.800     1.900         28.94
+7                    |  2.800       1.500     5.500          2.19
+---------------------+---------------------------------------------------
+I-V pooled ES        |  1.319       1.023     1.615        100.00
+---------------------+---------------------------------------------------
+ Heterogeneity calculated by formula
+  Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
+where variance_i = ((upper limit - lower limit)/(2*z))^2 
+
+  Heterogeneity chi-squared =   6.36 (d.f. = 6) p = 0.384
+  I-squared (variation in ES attributable to heterogeneity) =   5.7%
+
+  Test of ES=0 : z=   8.74 p = 0.000
+
+. import delimited /home/drcjar/Documents/TaskForce/metaanalysis/metal_dust.csv
+> , clear 
+(3 vars, 9 obs)
+
+. metan or cilow ciup
+
+           Study     |     ES    [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+1                    | 10.970       2.300    52.400          0.01
+2                    |  1.340       1.140     1.590         74.19
+3                    |  1.680       1.070     2.650          6.02
+4                    |  1.080       0.440     2.650          3.08
+5                    |  2.000       1.000     4.000          1.67
+6                    |  9.550       1.680   181.120          0.00
+7                    |  0.900       0.510     1.590         12.88
+8                    |  1.580       0.690     3.610          1.76
+9                    |  2.800       1.080     7.230          0.40
+---------------------+---------------------------------------------------
+I-V pooled ES        |  1.317       1.124     1.511        100.00
+---------------------+---------------------------------------------------
+ Heterogeneity calculated by formula
+  Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
+where variance_i = ((upper limit - lower limit)/(2*z))^2 
+
+  Heterogeneity chi-squared =   5.74 (d.f. = 8) p = 0.677
+  I-squared (variation in ES attributable to heterogeneity) =   0.0%
+
+  Test of ES=0 : z=  13.32 p = 0.000
+
+. import delimited /home/drcjar/Documents/TaskForce/metaanalysis/wood_dust.csv,
+>  clear 
+(3 vars, 9 obs)
+
+. metan or cilow ciup
+
+           Study     |     ES    [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+1                    |  2.940       0.870     9.900          1.06
+2                    |  1.710       1.010     2.920         23.78
+3                    |  3.300       0.420    25.800          0.13
+4                    |  1.600       0.800     3.300         13.88
+5                    |  1.200       0.650     2.230         34.75
+6                    |  2.560       1.020     7.010          2.42
+7                    |  3.480       0.670    18.160          0.28
+8                    |  1.110       0.370     3.310         10.04
+9                    |  0.860       0.260     2.780         13.66
+---------------------+---------------------------------------------------
+I-V pooled ES        |  1.382       0.916     1.848        100.00
+---------------------+---------------------------------------------------
+ Heterogeneity calculated by formula
+  Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
+where variance_i = ((upper limit - lower limit)/(2*z))^2 
+
+  Heterogeneity chi-squared =   2.93 (d.f. = 8) p = 0.939
+  I-squared (variation in ES attributable to heterogeneity) =   0.0%
+
+  Test of ES=0 : z=   5.82 p = 0.000
+
+. import delimited /home/drcjar/Documents/TaskForce/metaanalysis/agricultural_d
+> ust.csv, clear 
+(3 vars, 7 obs)
+
+. metan or cilow ciup
+
+           Study     |     ES    [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+1                    | 10.890       1.240    96.000          0.01
+2                    |  3.010       1.290     7.430          2.27
+3                    |  2.700       1.300     5.500          4.85
+4                    |  1.600       1.000     2.500         37.99
+5                    |  0.550       0.160     1.890         28.56
+6                    |  1.000       0.440     2.280         25.25
+7                    |  3.340       1.170    10.120          1.07
+---------------------+---------------------------------------------------
+I-V pooled ES        |  1.253       0.791     1.716        100.00
+---------------------+---------------------------------------------------
+ Heterogeneity calculated by formula
+  Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
+where variance_i = ((upper limit - lower limit)/(2*z))^2 
+
+  Heterogeneity chi-squared =   7.73 (d.f. = 6) p = 0.259
+  I-squared (variation in ES attributable to heterogeneity) =  22.3%
+
+  Test of ES=0 : z=   5.31 p = 0.000
+
+. log close
+      name:  <unnamed>
+       log:  /home/drcjar/Documents/TaskForce/metaanalysis/metaanalysis14_10_16
+> .smcl
+  log type:  smcl
+ closed on:  14 Oct 2016, 23:05:38
+-------------------------------------------------------------------------------

@@ -1,0 +1,33 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/home/drcjar/Documents/TaskForce/metaanalysis/metaanalysis14_10_16.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}17 Oct 2016, 12:39:50
+{txt}
+{com}. import delimited /home/drcjar/Documents/TaskForce/metaanalysis/any_dust.csv
+{res}{err}no; data in memory would be lost
+{txt}{search r(4), local:r(4);}
+
+end of do-file
+
+{search r(4), local:r(4);}
+
+{com}. do "/tmp/SD13543.000000"
+{txt}
+{com}. log using "/home/drcjar/Documents/TaskForce/metaanalysis/metaanalysis17_10_16.smcl", replace
+{err}log file already open
+{txt}{search r(604), local:r(604);}
+
+end of do-file
+
+{search r(604), local:r(604);}
+
+{com}. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/home/drcjar/Documents/TaskForce/metaanalysis/metaanalysis14_10_16.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}17 Oct 2016, 12:41:06
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
