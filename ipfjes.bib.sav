@@ -1,4 +1,3 @@
-% This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
 
@@ -3633,5 +3632,36 @@
   Timestamp                = {2014.05.18}
 }
 
-@comment{jabref-meta: databaseType:biblatex;}
+@Article{Gulati2015,
+  author          = {Gulati, Mridu and Redlich, Carrie A},
+  title           = {Asbestosis and environmental causes of usual interstitial pneumonia.},
+  journal         = {Current opinion in pulmonary medicine},
+  year            = {2015},
+  volume          = {21},
+  issue           = {2},
+  month           = mar,
+  pages           = {193--200},
+  issn            = {1531-6971},
+  doi             = {10.1097/MCP.0000000000000144},
+  __markedentry   = {[drcjar:6]},
+  abstract        = {Recent epidemiologic investigations suggest that occupational and environmental exposures contribute to the overall burden of idiopathic pulmonary fibrosis (IPF). This article explores the epidemiologic and clinical challenges to establishing exposure associations, the current literature regarding exposure disease relationships and the diagnostic work-up of IPF and asbestosis patients. IPF patients demonstrate a histopathologic pattern of usual interstitial pneumonia. In the absence of a known cause or association, a usual interstitial pneumonia pattern leads to an IPF diagnosis, which is a progressive and often terminal fibrotic lung disease. It has long been recognized that asbestos exposure can cause pathologic and radiographic changes indistinguishable from IPF. Several epidemiologic studies, primarily case control in design, have found that a number of other exposures that can increase risk of developing IPF include cigarette smoke, wood dust, metal dust, sand/silica and agricultural exposures. Lung mineralogic analyses have provided additional support to causal associations. Genetic variation may explain differences in disease susceptibility among the population. An accumulating body of literature suggests that occupational and environmental exposure can contribute to the development of IPF. The impact of exposure on the pathogenesis and clinical course of disease requires further study.},
+  chemicals       = {Asbestos},
+  citation-subset = {IM},
+  completed       = {2016-01-04},
+  country         = {United States},
+  created         = {2015-01-27},
+  issn-linking    = {1070-5287},
+  keywords        = {Asbestos, adverse effects; Asbestosis, diagnosis, physiopathology; Environmental Exposure; Humans; Lung Diseases, Interstitial, chemically induced, physiopathology; Occupational Diseases, chemically induced, physiopathology; Risk Factors},
+  mid             = {HHSPA667830},
+  nlm             = {PMC4472384},
+  nlm-id          = {9503765},
+  owner           = {NLM},
+  pii             = {00063198-201503000-00014},
+  pmc             = {PMC4472384},
+  pmid            = {25621562},
+  pubmodel        = {Print},
+  pubstatus       = {ppublish},
+  revised         = {2017-02-20},
+}
 
+@Comment{jabref-meta: databaseType:biblatex;}
