@@ -1,0 +1,11 @@
+"First author, year","Cases exposed 
+n/N (%)","OR or PMR
+(95% CI)",PAR,Notes
+"Scott, 1990",27/40 (68),1.32 (0.84-2.04),16.00%,controls matched for age and sex
+"Iwai, 1994",n/615 (%),2.0 (1.16-3.08),x%,"autopsy; includes acute, chronic, and unknown time course cases; dust and organic solvent vapor related jobs; non-respiratory death controls matched for sex, age, residential area"
+"Mullen, 1998",6/15 (40),2.37 (0.67-8.44),23.00%,controls matched for age and sex
+"Miyake, 2005",33/102 (32),5.61 (2.12-17.89),26.00%,"adjusted for age, sex, and region"
+"Gustafson, 2007",86/140 (61),1.1 (0.71-1.72),6.00%,"“any occupational exposure”; stratified by sex, year of diagnosis, birth year, and smoking"
+"Garcia-Sancho Figueroa, 2010",55/97 (57),1.2 (0.8-1.9),10.00%,matching criteria not mentioned; controls with resp disease
+"Garcia-Sancho, 2011",77/100 (77),2.8 (1.5-5.5),50.00%,"“dusts/smokes/gases or chemicals”; healthy controls matched for residence, age, sex, ethnic origin; adjusted for other predictive variables (fam hx, former smoker, GERD, DM2)"
+"Koo, 2017",43/78 (55),2.7 (0.65-10.93),35.00%,"matched for age, sex, place of residence, model adjusted for environmental exposure, military exposure, and smoking"

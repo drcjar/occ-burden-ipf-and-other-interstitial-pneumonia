@@ -1,0 +1,14 @@
+"First author, year","Cases exposed 
+n/N (%)","OR or PMR
+(95% CI)",PAR,Notes
+"Scott, 1990",6/40 (15),2.94 (0.87-9.90),10.00%,controls matched for age and sex
+"Hubbard, 1996",30/218 (14),1.71 (1.01-2.92),5.30%,questionnaire; adjusted for smoking and exposure to metal dust; PAR reported by authors
+"Mullen, 1998",2/15 (13),3.30 (0.42-25.8),9.00%,controls matched for age and sex
+"Baumgartner, 2000",20/244 (8),1.6 (0.8-3.3),3.00%,adjusted for age and smoking
+"Miyake, 2005",5/102 (5),6.03 (0.32- 112.4) ,4.00%,no cases in 59 controls; substituted 0.5 to get OR
+"Gustafson, 2007",22/140 (16),1.2 (0.65-2.23),3.00%,"stratified by sex, year of diagnosis, birth year, and smoking"
+"Awadalla, 2012",14/95 (15),2.56 (1.02-7.01),9.00%,"men; adjusted for age, residence, smoking"
+"Awadalla, 2012",8/106 (8),3.48 (0.67-18.16),8.00%,"women; adjusted for age, residence, smoking"
+"Paolocci, 2013",5/65 (8),1.11 (0.37-3.31),1.00%,"softwood dust; adjusted for age, gender, smoking"
+"Paolocci, 2013",4/65 (6),0.86 (0.26-2.78),N/A,"hardwood dust; adjusted for age, gender, smoking"
+"Koo, 2017",6/78 (8),2.51 (0.52-12.28),5.00%,"matched for age, sex, place of residence, model adjusted for environmental exposure, military exposure, and smoking"
