@@ -1,0 +1,64 @@
+using metabias6 or cilow ciup, graph(begg) to look for publication bias
+
+- for anydust.csv	(that is pooled VGDF OR)
+
+metabias6 or cilow ciup, graph(begg)
+
+Egger's test
+------------------------------------------------------------------------------
+     Std_Eff |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       slope |  -.2608817   .3003843    -0.87   0.419    -.9958956    .4741323
+        bias |   2.602292   1.021956     2.55   0.044     .1016561    5.102928
+
+
+We should say "We found evidence of publication bias (Egger's test p = 0.04)"
+
+- for metaldust.csv (that is pooled metal OR)
+
+metabias6 or cilow ciup, graph(begg)
+
+Egger's test
+------------------------------------------------------------------------------
+     Std_Eff |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       slope |   .1364928   .1237388     1.10   0.302    -.1488494    .4218351
+        bias |   1.353055   .5486056     2.47   0.039     .0879688    2.618142
+------------------------------------------------------------------------------
+
+We should say "We found evidence of publication bias (Egger's test p = 0.04)"
+
+- for wooddust.csv (that is pooled wood OR)
+
+Egger's test
+------------------------------------------------------------------------------
+     Std_Eff |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       slope |   .1083464   .2429746     0.45   0.666    -.4413002    .6579931
+        bias |   .9234064   .5095045     1.81   0.103    -.2291729    2.075986
+------------------------------------------------------------------------------
+
+We should say "We did not find evidence of publication bias (Egger's test p = 0.1)"
+
+- for agricultural_dust.csv (that is pooled agricultural dust OR)
+
+Egger's test
+------------------------------------------------------------------------------
+     Std_Eff |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-------------+----------------------------------------------------------------
+       slope |   .1850052   .6144791     0.30   0.778    -1.521062    1.891073
+        bias |   .9048069     1.4973     0.60   0.578    -3.252364    5.061978
+------------------------------------------------------------------------------
+
+We should say "We did not find evidence of publication bias (Egger's test p = 0.58)"
+
+
+
+
+
+
+
+
+
+
+
