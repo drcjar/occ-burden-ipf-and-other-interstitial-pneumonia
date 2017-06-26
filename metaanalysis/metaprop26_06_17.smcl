@@ -1,0 +1,111 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaprop26_06_17.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}26 Jun 2017, 10:28:49
+{txt}
+{com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/any_paf.csv, clear
+{res}{text}(4 vars, 7 obs)
+
+{com}. gen numround = round(num)
+{txt}
+{com}. metaprop numround denom, cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+
+{txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+Gustafson (2007){col 22}|{res}      0.06{col 35}      0.02         0.11{col 60} 48.21
+{txt}Garcia-Sancho Figuer{col 22}|{res}      0.09{col 35}      0.04         0.17{col 60} 21.38
+{txt}Scott (1990){col 22}|{res}      0.17{col 35}      0.07         0.33{col 60}  5.14
+{txt}Mullen (1998){col 22}|{res}      0.20{col 35}      0.04         0.48{col 60}  1.74
+{txt}Miyake (2005){col 22}|{res}      0.26{col 35}      0.18         0.36{col 60}  9.72
+{txt}Koo (2017){col 22}|{res}      0.35{col 35}      0.24         0.46{col 60}  6.39
+{txt}Garcia-Sancho (2011){col 22}|{res}      0.50{col 35}      0.40         0.60{col 60}  7.42
+{txt}---------------------+---------------------------------------------------
+Fixed pooled  ES{col 22}|{res}      0.14{col 35}      0.12         0.17{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+
+  Test of ES=0 : z= {res}     10.63{txt} p = {res}      0.00
+{txt}
+{com}. 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metal_paf.csv, clear
+{res}{text}(4 vars, 10 obs)
+
+{com}. gen numround = round(num)
+{txt}(1 missing value generated)
+
+{com}. metaprop numround denom, cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+
+{txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+Hubbard (2000){col 22}|{res}      0.05{col 35}      0.00         0.23{col 60}  4.17
+{txt}Baumgartner (2000){col 22}|{res}      0.05{col 35}      0.03         0.09{col 60} 41.03
+{txt}Awadalla (2012){col 22}|{res}      0.06{col 35}      0.02         0.13{col 60} 13.20
+{txt}Paolocci (2013){col 22}|{res}      0.09{col 35}      0.03         0.19{col 60}  6.38
+{txt}Hubbard (1996){col 22}|{res}      0.10{col 35}      0.06         0.15{col 60} 19.75
+{txt}Miyake (2005){col 22}|{res}      0.11{col 35}      0.06         0.18{col 60}  8.71
+{txt}Scott (1990){col 22}|{res}      0.12{col 35}      0.04         0.27{col 60}  3.01
+{txt}Koo (2017){col 22}|{res}      0.22{col 35}      0.13         0.33{col 60}  3.76
+{txt}Gustafson (2007){col 22}|  (Excluded)
+---------------------+---------------------------------------------------
+Fixed pooled  ES{col 22}|{res}      0.08{col 35}      0.06         0.10{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+
+  Test of ES=0 : z= {res}      8.70{txt} p = {res}      0.00
+{txt}
+{com}. 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/wood_paf.csv, clear
+{res}{text}(4 vars, 10 obs)
+
+{com}. gen numround = round(num)
+{txt}
+{com}. metaprop numround denom, cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+
+{txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+Paolocci (2013){col 22}|{res}      0.02{col 35}      0.00         0.08{col 60} 14.64
+{txt}Gustafson (2007){col 22}|{res}      0.03{col 35}      0.01         0.07{col 60} 17.20
+{txt}Baumgartner (2000){col 22}|{res}      0.03{col 35}      0.01         0.06{col 60} 26.24
+{txt}Miyake (2005){col 22}|{res}      0.04{col 35}      0.01         0.10{col 60}  9.23
+{txt}Koo (2017){col 22}|{res}      0.05{col 35}      0.01         0.13{col 60}  5.47
+{txt}Hubbard (1996){col 22}|{res}      0.06{col 35}      0.03         0.09{col 60} 14.30
+{txt}Mullen (1998){col 22}|{res}      0.07{col 35}      0.00         0.32{col 60}  0.82
+{txt}Awadalla (2012){col 22}|{res}      0.07{col 35}      0.04         0.11{col 60} 10.58
+{txt}Scott (1990){col 22}|{res}      0.10{col 35}      0.03         0.24{col 60}  1.52
+{txt}Paolocci (2013){col 22}|  (Excluded)
+---------------------+---------------------------------------------------
+Fixed pooled  ES{col 22}|{res}      0.04{col 35}      0.03         0.05{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+
+  Test of ES=0 : z= {res}      6.76{txt} p = {res}      0.00
+{txt}
+{com}. 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/agri_paf.csv, clear
+{res}{text}(4 vars, 5 obs)
+
+{com}. gen numround = round(num)
+{txt}(1 missing value generated)
+
+{com}. metaprop numround denom, cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+
+{txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+Baumgartner (2000){col 22}|{res}      0.07{col 35}      0.04         0.11{col 60} 52.67
+{txt}Awadalla (2012){col 22}|{res}      0.07{col 35}      0.04         0.12{col 60} 42.04
+{txt}Scott (1990){col 22}|{res}      0.12{col 35}      0.04         0.27{col 60}  5.28
+{txt}Miyake (2005){col 22}|  (Excluded)
+---------------------+---------------------------------------------------
+Fixed pooled  ES{col 22}|{res}      0.08{col 35}      0.05         0.10{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+
+  Test of ES=0 : z= {res}      6.26{txt} p = {res}      0.00
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaprop26_06_17.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}26 Jun 2017, 10:28:53
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}
