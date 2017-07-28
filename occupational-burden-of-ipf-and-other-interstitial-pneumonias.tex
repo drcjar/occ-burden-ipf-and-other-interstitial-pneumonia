@@ -1,5 +1,4 @@
-\documentclass[a4
-er,12pt]{article}
+\documentclass[a4paper,10pt]{article}
 
 %set font to Arial
 %\usepackage{fontspec}
@@ -9,11 +8,34 @@ er,12pt]{article}
 
 %graphics
 \usepackage{graphicx}
+%\usepackage{subfigure}
 \usepackage{pslatex}
 \usepackage{pstricks}
 
 %math equations
 \usepackage{amsmath}
+
+%python code
+%\usepackage{minted}
+
+%glossary
+\usepackage[toc]{glossaries}
+\makeglossary
+
+%appendix
+\usepackage[title,titletoc,toc]{appendix}
+
+%headers
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\pagestyle{fancy} 
+\lhead{IPFJES}
+\rhead{\thepage\ of \pageref{LastPage}}
+\chead{}
+\lfoot{}
+\cfoot{}
+\rfoot{} 
+
 
 %display URLS
 \usepackage{url}
@@ -27,7 +49,12 @@ er,12pt]{article}
 %nice tables
 \usepackage{booktabs}
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
-\usepackage{longtable}
+
+%multi rows for the nice tables
+%\usepackage{multirow} 
+
+%nice diplay of code
+%\usepackage{minted}
 
 %nice references
 \usepackage[super]{natbib}
@@ -35,416 +62,148 @@ er,12pt]{article}
 %some maths
 \usepackage{amsmath}
 
-\newpage\title{\bf Occupational burden of IPF and other interstitial pneumonias)} 
-\author{Carl Reynolds and Kristin Cummings\\
+%ability to include pdf
+\usepackage{pdfpages}
 
-\pagenumbering{gobble}
+%captions
+\usepackage{caption}
+
+%margins
+%\usepackage{geometry}
+%\geometry{verbose,a4paper,tmargin=60mm,bmargin=25mm,lmargin=25mm,rmargin=25mm}
+
+%in line citations
+%\usepackage{bibentry}
+
+%\hyphenpenalty=10000
+
+%\nobibliography*
+
+
+\newpage\title{\bf Occupational burden of IPF and other interstitial pneumonias)} 
+\author{Carl Reynolds and Kristin Cummings\\}
+
+\date{}
+
+%\pagenumbering{gobble}
+
+%don't have to change study dates everywhere
+\newcommand{\studystart}{February 2017 }
+\newcommand{\studyend}{October 2019 }
 
 \begin{document}
 
-%what does a task force do?
+%\pagestyle{empty}
 
-%what is the purpose of our task force? for me is to summarise the occupational burden of IPF and other interstitial pneumonias
-
-%getting tables in 
-%updating kristians pap bit
-%adding more other interstitial pneumonia
-%?adding more ipf stuffs 
-%combine method
-%add metanalysis
-
-%word limits 500 + 1200 editions
-
-% table 1 all IPF studies 
-% table 2 pooled stuffs
-% table 3 all the other sods and ends
-
-\section*{\centering Occupational Burden of IPF and other interstitial pneumonias}
-
-\section{IPF}
-Idiopathic pulmonary fibrosis (IPF) is a diagnosis of exclusion. It is made in the
-presence of a usual interstitial pneumonitis (UIP) pattern on high resolution CT scan
-or biopsy. The diagnosis requires that known causes of interstitial lung disease
-(such as drug toxicity, connective tissue disease, domestic, and occupational or
-environmental exposures) be excluded\cite{Travis2013}.
-
-We identified four review articles covering occupational exposures in IPF\cite{Turner-Warwick1998, Hubbard2001, Taskar2006, Gulati2015} by drawing on relevant case-control studies. One\cite{Taskar2006} performs a meta-analysis of six case-control studies
-and reports opulation attributable risk percentages for agriculture and farming (20.8\%), livestock (4.1\%), wood dust (5\%), metal dust (3.4\%), stone/sand/silica (3.5\%), and smoking (49.1\%).
-
-As of May 2017 there are 14 case-control studies looking at occupational exposures in IPF\cite{Scott1990, Iwai1994, Hubbard1996, Mullen1998, Hubbard2000, Baumgartner2000, Miyake2005, Gustafson2007, Pinheiro2008, Garcia-SanchoFigueroa2010, Garcia-Sancho2011, Awadalla2012, Ekstrom2014, Koo2017}; the most recent review article\cite{Gulati2015} covers only eight of them. 
+\maketitle
 
 
-\begin{table}
-    \begin{tabular}{p{5cm}p{7cm}p{3cm}}
- 	\textbf{First author, year, reference} &                                     \textbf{Title} &           \textbf{Journal} \\
-	\midrule
-                    Scott J, 1990\cite{Scott1990} &  What causes cryptogenic fibrosing alveolitis? A case-control study of environmental exposure to dust. &                         BMJ \\
-                     Iwai K, 1994\cite{Iwai1994} &  Idiopathic pulmonary fibrosis. Epidemiologic approaches to occupational exposure. &   Am J Respir Crit Care Med \\
-                  Hubbard R, 1996\cite{Hubbard1996} &  Occupational exposure to metal or wood dust and aetiology of cryptogenic fibrosing alveolitis. &                      Lancet \\
-                   Mullen J, 1998\cite{Mullen1998} &  Case-control study of idiopathic pulmonary fibrosis and environmental exposures. &         J Occup Environ Med \\
-                  Hubbard R, 2000\cite{Hubbard2000} &  Risk of cryptogenic fibrosing alveolitis in metal workers. &                      Lancet \\
-             Baumgartner KB, 2000\cite{Baumgartner2000} &  Occupational and environmental risk factors for idiopathic pulmonary fibrosis: a multicenter case-control study. &              Am J Epidemiol \\
-                   Miyake Y, 2005\cite{Miyake2005} &  Occupational and environmental factors and idiopathic pulmonary fibrosis in Japan. &               Ann Occup Hyg \\
-                Gustafson T, 2007\cite{Gustafson2007} &  Occupational exposure and severe pulmonary fibrosis.  &                  Respir Med \\
-                Pinheiro GA, 2008\cite{Pinheiro2008} &  Occupational risks for idiopathic pulmonary fibrosis mortality in the United States. &  Int J Occup Environ Health \\
-        García-Sancho Figueroa MC, 2010\cite{Garcia-SanchoFigueroa2010} &  Risk factors for idiopathic pulmonary fibrosis in a Mexican population. A case-control study. &                  Respir Med \\
-            García-Sancho C, 2011\cite{Garcia-Sancho2011} &  Familial pulmonary fibrosis is the strongest risk factor for idiopathic pulmonary fibrosis. &                  Respir Med \\
-                Awadalla NJ, 2012\cite{Awadalla2012} &  Occupational and environmental risk factors for idiopathic pulmonary fibrosis in Egypt: a multicenter case-control study. &     Int J Occup Environ Med \\
-                  Ekström M, 2014\cite{Ekstrom2014} &  Effects of smoking, gender and occupational exposure on the risk of severe pulmonary fibrosis: a population-based case-control study. &                    BMJ Open \\ 
-                     Koo JW, 2017\cite{Koo2017} &  Occupational exposure and idiopathic pulmonary fibrosis: a multicentre case-control study in Korea. &       Int J Tuberc Lung Dis \\
-	\bottomrule
-    \end{tabular}
-	\caption{Previous IPF case-control studies looking at occupational exposure}
-	\label{table:papers}
+
+% 5000 words max
+
+
+
+\section*{}
+
+
+Idiopathic pulmonary fibrosis (IPF) is a diagnosis of exclusion. It is made in the presence of a usual interstitial pneumonitis (UIP) pattern on high resolution CT scan or biopsy. The diagnosis requires that known causes of interstitial lung disease (such as drug toxicity, connective tissue disease, domestic, and occupational or environmental exposures) be excluded.\cite{Travis2013}
+
+There are many review articles of the epidemiology of interstitial lung disease that do not necessarily focus on IPF and only briefly mention occupational factors. We selected review articles that specifically deal with occupational factors in IPF and cite the case-control studies and case-reports identified.
+
+Turner-Warwick (1998) discusses potential difficulties in establishing attribution and causality in IPF. She observes that there is variation in clinical practice with respect to the standard applied to exclude IPF; some clinicians exclude IPF when exposure to a potential cause is identified, others only when there is clear exposure to an established cause. She explains that diagnosis based on radiologic and clinical findings, and not on lung biopsy or bronchioalveolar lavage, may result in initiating agents for disease being overlooked. Further, that exposures such as asbestos, silica, coal,
+graphite, hard metal, and avian proteins, may result in disease that can not be differentiated from IPF.\cite{Turner-Warwick1998}
+
+Reviewing the epidemiology of IPF and case-control studies to date Hubbard (2001) describes the association of IPF with occupational exposures to metal and wood and estimates that 10\% of IPF cases may be due to occupational metal exposure and 5\% of cases to wood.\cite{Hubbard2001}
+
+Taskar and Coultas (2006) review and carry out a meta-analysis of six case-control studies investigating environmental and occupational exposures in IPF. They report population attributable risk percentages for agriculture and farming (20.8\%), livestock (4.1\%), wood dust (5\%), metal dust (3.4\%), stone/sand/silica (3.5\%), and smoking (49.1\%).\cite{Taskar2006}
+
+Gulati and Redlich’s (2015) review of exposures causing usual interstitial pneumonia highlights that asbestosis may appear indistinguishable from IPF and summarises previous case-control studies but did not pool studies to perform a meta-analysis.\cite{Gulati2015}
+
+We found (as of May 2017) 14 case-control studies looking at occupational exposures in IPF (Table \ref{metatable1}); the most recent review article covers only eight of them.  Associations with metal, wood, silica, and agricultural dust were reported. \cite{Scott1990, Iwai1994, Hubbard1996a, Mullen1998, Baumgartner2000, Miyake2005, Gustafson2007, Garcia-SanchoFigueroa2010, Garcia-Sancho2011, Awadalla2012, Paolocci2013, Koo2017}     
+
+Two investigators independently reviewed and abstracted data for five exposure categories
+common to the identified case-control studies: “vapors, gases, dusts, and/or fumes (VGDF)”, “metal dust”, “wood dust”, “silica dust”, and “agricultural dust”. We calculated PAF as follows: PAF=pc(OR - 1)/OR, where pc is the proportion of cases exposed and OR is the risk estimate.  
+
+We calculated pooled OR and pooled PAF for occupational exposures using fixed effects models and  random effects models in Stata. When there was  results of the models differed substantively, we used the results of the fixed effects model, which were more conservative. The pooled PAF relied on the ratio of attributable cases to all cases underlying each risk estimate.
+
+In all, 43 risk estimates from 14 publications (2027 IPF cases in total) were used. Each exposure category was assessed with 6-11 risk estimates. Pooled ORs were significantly elevated for each category; the pooled PAF estimates by category ranged from 4-14\% (Table \ref{metatable2}). We found funnel plot asymmetry using Egger's test, which may be due to publication bias, for VGDF (p = 0.04) and metal dust (p = 0.04) but not for wood dust (p = 0.1), silica dust (p = 0.2), and agricultural dust (p = 0.6). However, the number of studies included is small and funnel plot assymetry may be due to chance rather than bias.
+
+The observed excess risk could represent disease misclassification of pneumoconiosis or hypersensitivity pneumonitis, but this is unlikely to fully explain the observed effects. Our analysis supports an etiologic role for occupational exposures in IPF, potentially explaining up to 14\% of the burden of disease and highlighting a role for workplace exposure reduction in disease prevention.
+
+\begin{table}[htbp]\centering
+\caption{Summary of IPF case-control studies investigating occupational exposures}
+\label{metatable1}
+
+\tiny
+
+    \begin{tabular}{|p{1.5cm}|p{0.5cm}p{0.5cm}p{0.5cm}p{0.5cm}p{0.5cm}|p{0.5cm}p{0.5cm}p{0.5cm}p{0.5cm}p{0.5cm}|p{2.5cm}|p{2cm}|}
+
+\midrule
+
+\textbf{Reference (n cases)} & \multicolumn{5}{c}{\textbf{OR; 95\% CI}} & \multicolumn{5}{c}{\textbf{PAF \%}} & \textbf{Case Definition} & \textbf{Exposure Measure} \\
+
+        & vgdf* & metal & wood & ag & si & vgdf* & metal & wood & ag & si & & \\
+\toprule
+
+
+        Scott 1990(40)\cite{Scott1990}                   & 1.3; 0.8, 2.0 & 11.0; 2.3, 52.0 & 2.9; 0.9, 9.9 & 10.9; 1.2, 96.0 & 1.6; 0.5, 4.8 & 17 & 12 & 10 & 12 & 15 & clinical assessment, CXR, pulmonary function             & questionnaire                         \\
+\hline
+        Iwai 1994(86)\cite{Iwai1994}                     &               & 1.3; 1.1, 1.6   &               & 3.0; 1.3, 7.4   &    &    &    &    &   & & clinical assessment, CXR or CT, pulmonary function       & questionnaire                         \\
+\hline
+        Iwai 1994(615)\cite{Iwai1994}                    & 2.0; 1.2, 3.1 &               &               &               &    &    &    &    & & & autopsy                                                  & job group                             \\
+\hline
+        Hubbard 1996(218)\cite{Hubbard1996a}                 &               & 1.7; 1.1, 2.7   & 1.7; 1.0, 2.9   &               &  1.8; 1.0, 3.1  & 10 & 6  &    &  & & clinical assessment, CXR or CT, pulmonary function       & questionnaire and telephone interview \\
+\hline
+        Mullen 1998(15)\cite{Mullen1998}                   & 2.4; 0.7, 8.4   &               & 3.3; 0.4, 25.8  &  & 11; 1.1, 115             & 23 &    & 7  &    & 20 & clinical assessment, lung biopsy or CT                   & questionnaire                         \\
+\hline
+        Baumgartner 2000(248)\cite{Baumgartner2000}             &               & 2.0; 1.0, 4.0   & 1.6; 0.8, 3.3   & 1.6; 1.0, 2.5   & 3.9; 1.2, 12.7 &   & 5  & 3  & 7 & 3 & clinical assessment, lung biopsy or BAL, CT              & telephone interview                   \\
+\hline
+        Hubbard 2000(22)\cite{Hubbard2000}                  &               & 1.1; 0.4, 2.7   &               &               &    & 5  &    &    &  & & death certificate diagnosis                              & job group                             \\
+\hline
+        Miyake 2005(102)\cite{Miyake2005}                  &               & 9.6; 1.7, 181.1 & 6.0; 0.3, 112.4 &    & 1.8; 0.5, 7.0           & 26 & 11 & 4  &    & 11 & clinical assessment, lung biopsy or BAL, CT              & questionnaire                         \\
+\hline
+        Gustafson 2007(140)\cite{Gustafson2007}               & 1.1; 0.7, 1.7   & 0.9; 0.5, 1.6   & 1.2; 0.7, 2.2   &   & 1.4; 0.7, 2.7           & 6  &    & 3  &    & 10 & pulmonary fibrosis of unknown aetiology + requiring LTOT & questionnaire                         \\
+\hline
+        Garcia-Sancho Figueroa 2010(97)\cite{Garcia-SanchoFigueroa2010}   & 1.2; 0.8, 1.9   &               &               &               & 9  &    &    &    & & & clinical assessment, CT +/- lung biopsy                  & questionnaire                         \\
+\hline
+        Garcia-Sancho 2011(100)\cite{Garcia-Sancho2011}           & 2.8; 1.5, 5.5   &               &               &               & 5  &    &    &    & & & clinical assessment, CT +/- lung biopsy                  & questionnaire                         \\
+\hline
+        Awadalla 2012(201)\cite{Awadalla2012}                &               & 1.6; 0.7, 3.6   & 2.7; 1, 16.8    & 1.3; 0.7, 2.0   & 1.1; 0.5, 2.7 &   & 6  & 7  & 7  & 13 & clinical assessment, CT, pulmonary function              & questionnaire                         \\
+\hline
+        Paolocci 2013 (abstract only)(65)\cite{Paolocci2013} &               & 2.8; 1.1, 7.2   &               &               & 2.0; 0.9, 4.4 &   & 9  & 2  &    & 22 & clinical assessment and CT                               & questionnaire                         \\
+\hline
+        Koo 2017(78)\cite{Koo2017}                      & 2.7; 0.7, 10.9  & 5.0; 1.4, 18.2  & 2.5; 0.5, 12.3  & & 1.2; 0.4, 3.8              & 35 & 22 & 5  &    & 27 & clinical assessment, CT +/- lung biopsy                  & interview       \\        
+\bottomrule             
+\end{tabular}
 \end{table}
-               
 
-\
-
-\begin{table}
-    \begin{tabular}{lrll}
-        \textbf{Exposure} &  \textbf{Risk Estimates (n)} & \textbf{Pooled OR (95\% CI)} & \textbf{Pooled PAF\% (95\% CI)} \\
-              \midrule
-               Any dust &  8 &  1.56 (1.28-1.91) &  14 (12-17) \\
-               Metal dust &  10 &  1.44 (1.25-1.65) &  8 (6-10) \\
-               Wood dust &  11 &  1.66(1.25-2.2) &  4 (3-5) \\
-               Agricultural dust &  6 &  1.68 (1.21-2.34) &  9 (6-12) \\
-               \bottomrule
-    \end{tabular}
-    \caption{Pooled estimates of occupational contributions to IPF. CI = confidence interval; OR = odds ratio; PAF\% = population attributable fraction, expressed as a percentage.}
-    \label{table:ipfpooled}
-\end{table}
-
-
-\section{Other interstitial pneumonias}
-
-?something about considering other interstitial pneumonia in order of occupational PAR / how common it is?
-
-\subsection{Pulmonary alveolar proteinosis}
-Pulmonary alveolar proteinosis (PAP) is a rare, diffuse lung disease characterized by alveolar filling with lipoproteinaceous material derived from surfactant  PAP has traditionally been categorized as congenital, secondary, or primary (idiopathic).  Cases considered secondary are those that occur in association with hematological disorders, infections, or inhalational exposures.  Primary PAP, the most common category, is now recognized to be an autoimmune disorder involving autoantibodies
-to granulocyte-macrophage colony stimulating factor (GM-CSF) that impair alveolar macrophage function and surfactant homeostasis.
-
-PAP has been reported in associations with a variety of occupational exposures.  The best documented is silica: in 1969, Buechner and Ansari introduced the term silicoproteinosis to describe four cases in sandblasters of rapidly progressive disease with histological features of PAP  Other case reports followed, including recent reports in denim sandblasters and engineered stone workers  In retrospect, early 20th-century reports of silica-exposed workers with short-latency disease
-histologically distinct from chronic silicosis were likely PP.1  Animal models have demonstrated that silica exposure leads to increased surfactant volume and alveolar macrophage toxiit.  Cases of PAP also have been reported in association with tin, aluminum, nitrogen dioxide, titanium, and indium-tin oxide (ITO)2-1
-
-Despite the traditional categorization, some evidence suggests occupational exposures contribute to autoimmune PAP.  A former coal miner diagnosed with PAP and silicosis had elevated serum anti-GM-CSF autoantibodies, whereas 50 cases of silicosis without PAP did not.  Another case of PAP with autoantibodies to GM-CSF was reported in an ITO production facility worke  However, other ITO workers without PAP did not have these autoantibodies92  A Japanese national registry of 199
-cases and a Chinese case-control study with 45 cases each reported inhalational exposures in more than a quarter of those with autoimmune P,2  In a German series of 70 cases, more than half of the patients with autoimmune PAP reported a history of occupational dust or fume exsue  
-
-\subsubsection{Methods}
-We sought to systematically review the occupational contributions to PAP.  We searched Pubmed and Embase for “pulmonary alveolar proteinosis” and “occupation.”  References of relevant papers also were reviewed.  To estimate the proportion of cases with occupational inhalational exposures, we included publications that described at least 10 cases of PAP and that also noted the number with occupations involving likely exposure to various vapors, gases, dusts, and/or fumes (VGDF) or the
-number with presumably occupational VGDF exposures.  We calculated the prevalence of occupational exposures generally and silica exposure specifically.  Where silica exposure was not explicitly mentioned, we used the available occupational information to determine whether silica exposure was likely.  
-
-\subsubsection{Results}
-We identified 27 publications that met the inclusion criteria (Table).  Four publications were in part duplicative: the 27 cases in the original 1958 description of PAP by Rosen and colleagues were included in a subsequent literature review, and two papers reported different histopathologic investigations of some of the same cases6,  Therefore, a total of 25 studies describing 1450 PAP cases (range: 11-241 per study) were included.  Estimates of occupational inhalational exposure prevalence
-among cases range from 0\% to 59\%, with a mean of 30\% and a median of 33\%.  One single-institution retrospective study of 23 cases in the United States reported none of the patients had a history of “unusual occupational exposure”2 and a multi-center retrospective study of 38 cases in Korea noted “There were no cases of PAP due to occupational expose  In contrast, a multi-center retrospective series of 41 patients from France and Belgium reported a prevalence of occupational dust exposure
-of 39\% and single center retrospective studies in China (n=101) and Russia (n=68) noted that more than half of their cases had inhalational exposure-3  Some of this variation may reflect differences in how exposures were defined.  Studies that systematically collected information about exposure generally reported a higher prevalence.  For instance, the two largest series had divergent estimates that could be related to methodology: 26\% among 199 cases in the Japanese national
-registry, where exposure was assessed with a questionnaire versus 8\% among 241 cases identified through a review of case reports in the Chinese literature.
-
-Eighteen of the studies noted silica exposure.  The remainder described occupational exposures generally (“dust”), precluding a determination of silica exposure.  Sixteen studies describing 584 PAP cases (range: 12-139 per study) provided sufficient information to estimate prevalence and were included.  Estimates of silica exposure prevalence among cases ranged from 0\% to 22\%, with a mean and median of 6\%.  
-
-Most of the studies were case series, but three included comparison to controls.  McEuen and Abraham examined lung tissue of 37 cases and 13 controls, documenting significantly higher birefringent particle counts in cases than controls (p<0.05).  Their subsequent analysis of 24 of the cases and 5 controls found more birefringent particles in 78\% of cases and higher inorganic particle concentrations all cases compared to controls.  More recently, 34.2\% (13/38) of cases at a referral center
-in China were found to have occupational inhalational exposure, compared to 19.6\% (19/97) of hospital controls, although this difference was not statistically significant (p=0.072)   
-
-
-Case series provide evidence of the potential contribution of occupational exposures to PAP.  Estimates of exposure prevalence among cases range from 0\% to \ensuremath{>}50\%, depending on the series and definition used (refs).  One single-institution retrospective study of 23 cases in the United States reported none of the patients had a history of “unusual occupational exposure” \cite{Kariman1984}.  Conversely, a similar series of 70 patients in Germany found 54\% had past occupational dust or fume
-exposure, most commonly to silica, aluminum, and sawdust \cite{Bonella2011}, and a multi-center series of 41 patients from France reported a prevalence of occupational dust exposure of 39\% \cite{Briens2002}.  The largest series to date, with 223 cases in Japan, found that 32\% of men and 13\% of women reported inhalational dust exposure \cite{Inoue2008}.  
-
-Several case-control studies have addressed the role of occupational exposures in PAP.  McEuen and colleagues \cite{McEuen1978} examined lung tissue of 37 cases and 13 controls, documenting significantly higher birefringent particle counts in cases than controls.  In addition, occupational exposures were ascertained in 13 (35\%) cases.  A similar study of 24 cases and 5 controls found more birefringent particles in 78\% of cases and increased inorganic particle concentration
-in all cases \cite{Abraham1986}.  More recently, 34.2\% (13/38) of cases at a referral center in China were found to have occupational inhalational exposure, compared to 19.6\% (19/97) of hospital controls, although this difference was not statistically significant (P=0.072) \cite{Xiao2015}.   
-
-Most idiopathic PAP is now recognized as autoimmune, involving autoantibodies to granulocyte-macrophage colony stimulating factor (GM-CSF) (ref).  Although cases related to occupational exposures traditionally have been categorized separately, some evidence suggests occupational exposures contribute to autoimmune PAP (ref).  A case report of PAP and silicosis in a former coal miner noted he had elevated serum anti-GM-CSF autoantibodies, whereas 50 cases of silicosis without PAP did
-not \cite{Hosokawa2004}.  Another case of PAP with autoantibodies to GM-CSF was reported in an indium-tin oxide (ITO) production worker \cite{Cummings2010}.  However, subsequent testing of 17 ITO workers with lung disease in Japan did not detect these antibodies (ref).  The Japanese case series and the Chinese case-control study reported occupational inhalational exposure in about a third of those with autoimmune PAP \cite{Inoue2008}; \cite{Xiao2015}).  In the German case-control study, history of
-occupational dust or fume exposure was associated with GM-CSF autoimmunity \cite{Bonella2011}.  
-
-\begin{longtable}{p{2cm}p{3cm}p{1.5cm}p{1.5cm}p{1.5cm}p{4cm}}
-    \caption{Published series of at least 10 cases of pulmonary alveolar proteinosis (PAP)} \label{table:pap} \\
-    \hline
-    \textbf{First author, year [language if not English]} &  \textbf{Study Type, Location if not U.S.} &  \textbf{Cases, N} & \textbf{Reported Occupational Exposure(\%)} & \textbf{Reported Silica Exposure(\%)*} &
-    \textbf{Type of Exposure} \\
+\begin{table}[htbp]\centering
+\caption{Pooled estimates of occupational contributions to IPF (based on 12 case-control studies)}
+\label{metatable2}
+\begin{tabular}{llll}
+\toprule
+\textbf{Exposure}          & \textbf{Risk estimates (n)} & \textbf{Pooled OR (95\% CI)} & \textbf{Pooled PAF (95\% CI)} \\
 \midrule
-\endhead
-\midrule
-\multicolumn{3}{r}{{Continued on next page}} \\
-\midrule
-\endfoot
-
+VGDF*             & 8                  & 1.6 (1.3-1.9)       & 14 (12-17)           \\
+Metal dust        & 10                 & 1.4 (1.3-1.7)       & 8 (6-10)             \\
+Wood dust         & 11                 & 1.7 (1.3-2.2)       & 4 (3-5)              \\
+Agricultural dust & 6                  & 1.8 (1-3.1)         & 8 (5-10)             \\
+Silica dust       & 9                  & 1.7 (1.3-2.3)       & 7 (5-9)              \\
 \bottomrule
-\endlastfoot
- Davidson, 1969(subsumes Rosen, 1958) &  Single center retrospective study (n=2) and literature review (n=137), multiple countries &  139 &  69 (50)** &  10 (7) &  Agricultural dusts and sprays, bakery flour dust, varnish, paint, petrol, cleaning fluids, wood dust, silica \\
- McEuen, 1978(further details in Abraham, 198626) &  Single center retrospective histopathology study &  37 &  13 (35) &  NR &  Cement dusts, oven cleaners, silica, hairsprays, insecticides, spray paints, metal fumes, soil particulates, silicates; history supplemented by tissue analysis \\
- Rubin, 1980 &  Single center retrospective study  &  13 &  2 (15) &  2 (15) &  Silica \\
- Kariman, 1984 &  Single center prospective study &  23 &  0 &  0 &  “None…had a history of unusual occupational exposure” \\
- Prakash, 1987 &  Single center retrospective study &  34 &  3 (9) &  2 (6) &  Silica, garden sprays, fertilizer manufacturing  \\
- Asamato, 1995[Japanese] &  Multi-center retrospective study, Japan &  68 &  10 (15) &  2 (3) &  Iron refinery (n=3), metal miners (n=2), pesticide, toluene, electrician, rug manufacturing, metal casting; one patient excluded due to silicosis \\
- Goldstein, 1998 &  Single center retrospective study  &  24 &  12 (50) &  0 &  Laborers without silica exposure (n=12) \\
- Kim, 1999 &  Single center retrospective study (n=5) and literature review (n=7), Korea &  12 &  4 (33) &  0 &  Farmers (n=2), seaman, mechanic \\
- Briens, 2002 [French] &  Multi-center retrospective study, France and Belgium &  41 &  16 (39) &  3 (7) &  Paint (n=3), silica (n=3), cement (n=2), wood dust, wool, epoxy resin, polyvinyl chloride, grain dust, zirconium, copper, welding \\
- Inoue, 2008 &  National registry, Japan &  199 &  52 (26) &  NR &  Dust  \\
- Xu, 2009 &  Literature review, China &  241 &  20 (8) &  NR &  Dust, metal, varnish, “etc.” \\
- Byun, 2010 &  Multi-center retrospective study, Korea &  38 &  0 &  0 &  “There were no cases of PAP due to occupational exposure.” \\
- Tazawa, 2010 &  Multi-center clinical trial, Japan &  48 &  19 (40) &  NR &  Dust  \\
- Bonella, 2011 &  Single center retrospective study, Germany &  70 &  36 (51) &  8 (11) &  Aluminum dust, bakery flour dust, cement dust, chlorine, cleaning products, gasoline fumes, paint, petroleum, saw dust, silica, synthetic plastic fumes, titanium, varnish (some patients had multiple exposures) \\
- Fang, 2012 &  Single center retrospective study, China &  25 &  9 (36) &  NR &  Dust, metal, silica, “etc.”\\
- Campo, 2013 &  Single center prospective study, Italy &  73 &  26 (36) &  10 (14) &  Inorganic dusts (silica, cement; n=19), pesticides (n=3), combustion products (n=2), organic dusts (n=1), photographic fixer (n=1) \\
- Fijolek, 2014 &  Single center retrospective study, Poland &  17 &  4 (24) &  0 &  Cement dust, wood dust, sawdust, mercaptans, sulfur, hydrogen chloride, pit-coal dust \\
- Ilkovich, 2014 &  Single center retrospective study, Russia &  68 &  40 (59) &  NR &  Chemical agents (acids, petrol, “etc.”) \\
- Akasaka, 2015 &  Multicenter retrospective therapeutic study, Japan &  31 &  8 (26) &  NR &  Dust \\
- Xiao, 2015 &  Single center prospective study, China &  45 &  17 (38) &  10 (22) &  Aluminum oxide, indium oxide, silica, ceramic tile polishing dust, cement powder dust, caustic soda powder, hydrogen chloride, emery wheel grinding dust \\
- Bai, 2016 &  Single center retrospective study, China  &  101 &  50 (50) &  NR &  Dust, fume, grease \\
- Deleanu, 2016 &  Single center retrospective study, Romania &  20 &  4 (20) &  1 (5) &  Asbestos, iron oxides, silica \\
- Hadda, 2016 &  Single center retrospective study (n=5) and literature review (n=30), India &  35 &  5 (14) &  2 (6) &  Cotton dust (n=2), sandstone (n=1),  glass cutting and fiber exposure (n=1), petrochemical worker (n=1) \\
- Mo, 2016 &  Single center retrospective study, China &  11 &  2 (18) &  NR &  Dust \\
- Guo, 2017 &  Single center prospective study, China &  37 &  18 (49) &  0 &  coal, chalk dust, dye, metal chip, macadam, paint, and gasoline \\
- Summary Statistics &  NA &  Total, N &  n/N (mean \%, median \%) &  n/N (mean \%, median \%) &  NA \\
- NA &  NA &  1450 &  439/1450 (30, 33) &  48/584 (6, 6) &  NA \\
-    \caption*{NR, not reported
-    *Subset of the “Occupational exposure” column.
-    **We estimated n=69 as the authors stated, “About half the patients have been exposed…to a wide variety of dusts and fumes….”
-    }\\
- \end{longtable}
+\end{tabular}
+\end{table}
 
-\subsubsection{Organizing Pneumonia}
-%chap 25
 
-Case reports of OP in patients with occupational exposures include cases in a spice processing worker, a floor cleaner exposed to benzalkonium compounds, a chemical factory worker with massive exposure to acetic acid, a worker exposed to hydrogen sulfide, a laboratory worker exposed to ortho-phenylenediamine, an art restorer exposed to gold dust, and a painter exposed to titanium nanoparticles \cite{Alleman2002}\cite{Stefano2003}\cite{Sheu2008}\cite{Doujaiji2010}\cite{Sanchez-Ortiz2011}\cite{Ribeiro2011}\cite{Cheng2012}.
+     
+     %%%%%%%%%%%%%%%%%%%%%%%%%%
+     \makeatletter
+      \def\@biblabel#1{#1}
+      \makeatother
+      %%%%%%%% gets rid of bracket around numbers in bibliography
+      %%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-An outbreak of OP occurred in the Spanish textile industry in the 1990s.  Case series documented 
-Carl to add from Parkes book and not forgetting our lit search summary doc.
+      \bibliographystyle{unsrtnat}
+      \bibliography{ipfjes}
 
-\subsubsection{Organising pneumonia with a COP-like pattern}
-Organizing pneumonia is defined pathologically by the presence of intra-alveolar buds of granulation tissue, consisting of intermixed myofibroblasts and connective tissue \cite{Cordier2000}. Formerly, the term bronchiolitis obliterans organizing pneumonia (BOOP) was also applied to this entity, but has fallen out of favor. Cryptogenic organising pneumonia (COP) is a clinicopathological entity in which organising pneumonia occurs due to an unknown cause, thus idiopathic by definition \cite{Bradley2008}. Nonetheless, there are known or suspected occupational causes of a COP-like pathological response.
 
-The most well-established occupational cause of interstitial lung disease with a COP-like response is the chemical acramin, also known by the trade name Ardystil. In April 1992 two young women who worked at a textile factory were treated for interstitial lung disease and severe pulmonary insufficiency at the hospital of Alcoi in the Autonomous Community of Valencia, Spain \cite{Moya1994}. Their work had involved the spraying of a reactive textile dye. The illnesses were notified to the local authority who linked them to another case involving a young woman who had worked at the same factory and who had succumbed to respiratory failure a few months before. This prompted an investigation of all printing textile factories that used similar spraying techniques in the area of Alcoi. Eight factories with a total of 257 employees were identified. Workers were interviewed with a standardised questionnaire covering respiratory symptoms and details of employment and each underwent a physical examination, chest radiograph, spirometry and a CT chest scan. Clinical and radiological data, together with biopsy samples from 71 employees, indicated the occurrence of an outbreak of organising pneumonia. Altogether there were six fatal cases. Epidemiological analysis of 22 cases who met radiological and biopsy criteria for organising pneumonia revealed that those who had worked at Factory A had the highest risk of being a case (RR=24.3; 95\% Cl=5.7-104.4), followed by Factory B (RR=11, 95\% CI=11.9- 62.9) and only two out of 22 cases had never worked in factories A or B. Airborne aerosol in the two factories were compared. The concentration ranged from 5 to 16 mg/m3 (mean 10 mg/m3) in factory A and 1 to 3 mg/m3 (mean 2 mg/m3) in factory B. It was found that only in factories A and B had the presence of an airborne chemical by the trade name Acramin FWR that recently been substituted with another related compound Acramin FWN. Subsequently, a similar outbreak was identified in Algeria \cite{OuldKadi1994}. Unfortunately, earlier toxicology studies of Acramin FWN and FWR had been limited to ingestion and dermal application, not studying the effects of inhalation. Susequent experimental studies of Acramin FWN and FWR by inhalation confirmed its respiratory tract toxicity. Although the precise mechanism remains unclear, it is suspected that the highly negatively charged long chain molecular structure of Acramin FWN contributes to toxicity \cite{Hoet1999}.
-
-The Ardystil story is exceptional because the magnitude of the initial outbreak did allow for classic epidemiologic study and, unfortunately, a further outbreak under similar conditions confirmed the initial observations. Finally, experimental data later gave additional support in establishing causality. In addition to Ardystil lung, however, there also have been other reports of COP-like pathology occurring in association with various occupational exposure scenarios. Each of these associations has been reported in an isolated case and in several of these the purported exposure was not well characterized.
-
-A case of BOOP (the terminology used) was reported in a spice processing worker \cite{Alleman2002} whose primary responsibility was filling and operating the hopper of a misting device that sprayed spices onto potato chips. He manually transferred spice mix from sacks into the hopper and generated significant dust in the process. Unfortunately, the precise ingredients of the spice mix were unavailable to the authors and they also were not permitted access to the workplace such that the nature of the exposure could not be further characterized.  In another case report, a cleaner was reported to have developed severe dyspnoea, cough, and fever, requiring hospitalisation, two weeks after a cleaning agent spill at work that resulted in benzalkonium compound vapour inhalation. In addition to BOOP (and of unknown significance) the cleaner was also diagnosed with myeloperoxidase deficiency \cite{Stefano2003}. Massive exposure to acetic acid steam resulting from an explosion in a chemical factory was described as resulting in delayed-onset BOOP in a 34-year old chemical worker \cite{Sheu2008}. In another irritant-related case, accidental exposure to hydrogen sulphide fume in an oil refinery worker resulted in a chemical pneumonitis with persistent right lower lobe consolidation; a lung biopsy was reported to show diffuse alveolar damage with organising pneumonia \cite{Doujaiji2010}. A case of COP developing following exposure to ortho-phenylenediamine was described in a 29-year old lab worker. The patient worked with ortho-phenylenediamine for six months before developing episodes of fever, productive cough, dyspnoea, and radiographic pulmonary infiltrates. A specific inhalation challenge with ortho-phenylenediamine with pre- and post-CT imaging supported the diagnosis \cite{Sanchez-Ortiz2011}. In another case report, a 58-year old man was reported to have developed BOOP after three months of exposure to heated electrostatic polyester powder paint. Mineralogical analysis indicated the presence of titanium dioxide nanoparticlesin both the paint and in a lung biopsy and this was posited to be the causal agent,  \cite{Cheng2012}. Finally, organising pneumonia temporally associated with gold dust inhalation was reported in a 47 year old restorer of religious art. He presented with a three week history of asthenia, myalgia, dry cough and fever which responded to systemic corticosteroids \cite{Ribeiro2011}.
-
-
-This heterogeneous series underscores the challenges in interpreting the case- report literature as it pertains to an idiopathic parenchymal lung disease such as COP. Some of the cases (e.g., following irritant inhalation) seem more consistent with a bronchiolitis obliterans response similar to the well-established pattern following nitrogen dioxide inhalation, rather than a COP-like pattern. Other cases seem consistent with a chemically-caused extrinsic alveolitis. Because the medicinal use of gold is associated with pneumonitis\cite{Tomioka1997a}, the case of organizing pneumonia linked with gold dust inhalation (like a rare exposure scenario) may have the greatest biologic plausibility among this group of individual reports.  Nonetheless, the precedent of the Ardystil lung syndrome argues for continued vigilance for occupational exposures that may induce a COP-like pathological response. Further, it has been argued that polymers with natively charged functionality may be particularly suspect and that this structure-function relationship may explain the recent outbreak of chemically associated severe lung injury to a disinfectant used in humidifiers in Korea (although that espisode was not characterized by a COP-like pattern)\cite{Nemery2015}.
-
-\subsubsection{Other Fibrotic Parenchymal Lung Responses to Inorganic Inhalants}
-There are several unusual fibrotic lung conditions associated with inorganic inhalants. These can be characterized by pathological abnormalities difficult to dis- tinguish from the UIP pattern of IPF, although the same exposures can also be manifested by with other lung pathological patterns of response. These inhalants include: rare earth pneumoconiosis, plutonium-associated fibrosis, and indium tin oxide-associated fibrosis.
-
-Rare-earth pneumoconiosis is a term applied to a homogeneous category of exposure (rare earth elements) but subsumes a heterogeneous group of parenchymal pulmonary pathologies, including diffuse fibrosis.
-
-Exposure of photoengravers to carbon arc lamp fume features prominently in the early rare earth pneumoconiosis case report literature. The earliest report de- scribed a case in which infiltrates documented by chest radiograph developed in a worker in the photographic department of a German printing plant. The worker was known to have been exposed to carbon arc lamp fume for several years, which prompted analysis of work room flue dust. This dust was found to contain large amounts of rare earth elements. Examination of 67 men working under similar conditions demonstrated that radiographic changes correlated with years of exposure to carbon dusts \cite{Heuck1968}.
-
-Interstitial lung fibrosis and restrictive lung function were reported in five reproduction photographers with more than a decade each of exposure to carbon arc lamp fume. X-ray microanalysis and electron diffraction revealed the presence of rare earth minerals (mainly cerium compounds) and the authors diagnosed”cerium pneumoconiosis” \cite{Vogt1986}. A 58 year old man who worked for 46 years in a photoengraving laboratory and was exposed to smoke emitted from carbon arc lamps presented with a two year history of progressive dyspnoea and minimally productive cough, a single case that was described in two separate pubications \cite{Vocaturo1983, Sabbioni1982}. Chest radiography showed reticulo-nodular shadowing and cardiomegaly. An ECG showed signs of right ventricular hypertrophy and cardiac catheterisation revealed pulmonary hypertension. Pulmonary function testing revealed obstruction and a reduced diffusing capacity for carbon monoxide (DLco). Lung biopsy showed peri-bronchiolar infiltrates and foci of sclerotic thickening of the connective septal tissues. The weight in ng/g of rare earth elements and thorium was determined using neutron activation analysis for the patient and for 11 controls who lived in the same district of North Italy but did not have occupational exposure: the patient had elevated levels of rare earth elements (RE) in the tissue compared to regional controls. Although thorium (a RE co-contaminant) was also elevated, its concentration was two orders of magnitude lower than the maximal permissible concentration for occupational exposure to natural 232 thorium, suggesting that the rare earthsbut not thorium was related to the pulmonary fibrosis observed. A case of pulmonary fibrosis has also been described in another photoengraver with 13 years exposure who presented 17 years after his exposure ended \cite{Sulotto1986}.
-
-A 60 year-old man was described as having diffuse interstitial lung fibrosis secondary to a distant 12 year exposure to rare earth  dusts that occurred during work as a movie projectionist with arc lamp fume exposure. Rare earths were present in significantly higher concentrations in the lung biopsy of the patient when compared to controls; there was an absence of any other identifiable cause for lung fibrosis \cite{Porru2001}. \cite{Waring1990} describes abnormally high tissue concentrations of rare earth ekementsin another movie projectionist with 25 years occupational exposure to carbon arc lamp fumes without the occurrence of respiratory disease but also enumerate 21 cases of RE pneumoconiosis. \cite{McDonald1995} describe a patient with 35 years exposure to rare earth materialsin the course of his work as an optical lens grinder who presented with progressive dyspnoea with an interstitial pattern on chest radiograph. On biopsy, rare earth elements were documented to have accumulated and the histological pattern was indistinguishable from UIP on lung biopsy.
-
-Dendriform pulmonary ossification has been described in association with rare earth pneumoconiosis \cite{Yoon2005}. A 38 year old man presented with a non-productive cough of several months duration. He had a history of working for three years as a polisher at a crystal factory 20 years previously. He recalled that his workplace had been poorly ventilated and heavily contaminated with greenish polishing powder. A chest radiograph showed reticulonodular shadowing. A CT chest showed diffuse, tiny, circular or bead-like densities with branching strucures in the interlobular septum, including the subpleural region. There were also emphysematous changes and bone windows showed a branching twig-like ossified mass in the right lower lobe and a few dot-like ossifications in both lower lobes. An open lung biopsy showed organizing pneumonia, interstitial fibrosis, peripheral emphysema, dendriform pulmonary ossification, and the presence of particulate matter. Analytic transmission electron microscopy with energy dispersive xray analysis demonstrated the presence of cerium oxide and lanthanum, both rare earth elements. Particles other than rare earth metals such as quartz, feldspar, mica, kaolinite, halloysite, talc and TiO2 were also present but were detected only infrequently. Other cases of rare earth pneumncosis have been reported among cerium rare earth processers (\cite{Husain1980,Nappee1972} and in glass polishers who use cerium containing “rouge” \cite{le1979raguenaud}. 
-
-In addition to the literature summarized above, there has also been an additional study based on bronchoalveolar lavage (BAL) analytes from a referral laboratory in France. That study found that seven of 416 otherwise non-characterized cases of occupational interstitial disease manifested elevated BAL cerium \cite{Pairon1994}. Among these, two were photo-engravers, and three glass or metal polishers. Further details for one of these, who also had worked as a part-time projectionist, were provided in a separate case report \cite{Pairon1995,Husain1980}.
-
-As noted earlier, thorium does not appear to be a confounder explaining rare earth pneumoconiosis, but inhaled radionuclides have otherwise been implicated in occupational pulmonary fibrosis as well. This has been shown best by Newman et. al. in a retrospective study of nuclear weapons workers that  estimated the absorbed radioactive dose to the lung with an internal dosimetry model \cite{Newman2005}. The study population comprised 326 plutonium-exposed workers and 194 unexposed referents. The severity of chest radiograph interstitial abnormalities between the two groups was compared using the profusion scoring system. There was a significantly higher proportion of abnormal chest radiographic profusion scores (by International Labour Organization scoring) among plutonium-exposed workers (17.5\%) than among the referent population (7.2\%). In that study, lung doses of 10 Severts (Sv) or greater conferred a 5.3-fold risk (95\% CI 1.22-3.4) of having an abnormal radiograph consistent with pulmonary fibrosis (controlling for the potentially confounding effects of age, smoking and asbestos exposure).
-
-An emerging disease process in this group is interstitial pneumonia from exposure to indium-tin oxide (ITO) \cite{Cummings2010,Cummings2012,Cummings2013,Homma2003,Homma2005, Lison2010,Lison2009,Omae2011,Tanaka2010,Xiao2010}. ITO is a sintered material composed of indium oxide and tin oxide and used in the making of thin-film transistor liquid crystal displays for televisions and computers. An early report \cite{Homma2003} described a prototypical case: a 27 year-old man who worked for three years in a Japanese metal processing factory as an operator of a wet surface grinder. He presented with 10 months of increasing dry cough, night sweats, progressive breathlessness, anorexia, and weight loss. He had digital clubbing and was hypoxaemic on room air. Chest CT demonstrated sub-pleural honeycombing and diffuse ground-glass opacities; lung biopsy found interstitial pneumonia and numerous fine particles within the alveolar macrophages and the alveolar spaces. The co-locating presence of indium and tin was demonstrated with X-ray energy spectrometry. In addition, the patient was found to have a high serum indium level (290\ensuremath{\mu}/l), approximately 3000-fold above a referent value (0.1\ensuremath{\mu}/l). Treatment with prednisolone was initiated but the patient succumbed to his illness. The same group described a similar, though less severe, case two years later \cite{Homma2005} in a 30 year old engineer from the same metal plant. A follow-up study of 115 workers at the same manufacturing plant identified 14 individuals with features of interstitial fibrosis on chest CT \cite{Chonan2004}. Experimental studies using rodent studies confirmed the pulmonary toxicity of ITO as well as its constituent metallurgic components \cite{Tanaka2010,Lison2010}.
-
-Since these initial reports of an IPF-like response, cases of pulmonary alveolar proteinosis (PAP), including one fatality, have been reported among workers at a US facility producing ITO \cite{Cummings2010}. The first patient described, a 49 year old non-smoker, noted the onset of dyspnoea after working nine months as a hydrogen furnace operator in a poorly ventilated room where he was exposed to ITO fumes. A high resolution CT scan demonstrated extensive ground-glass opacities, centrilobular nodules, and intralobular and inter- lobular septal thickening. The DLco was markedly reduced (37\% predicted) and the PaO2 was 59mmHg. Bronchoalveolar lavage demonstrated predominance of vacuolated macrophages and lymphocytes. Subsequent lung biopsy revealed proteinaceous material and globules positive with periodic acid-Schiff (PAS) stain consistent with PAP. Scanning electron microscopy and energy dispersive xray analysis identified the particles within the proteinaceous material as primarily indium. The patient was treated with oral steroids and segmental then whole lung lavage but succumbed to respiratory failure six years after presentation. A second patient, a 39 year old smoker, had a similar presentation and also had biopsy-proven pulmonary alveolar proteinosis with inductively coupled plasma/mass spectrometry confirmed indium (29.3\ensuremath{\mu}g per gram) in his lung tissue.
-
-Since these initial reports of an IPF-like response, cases of pulmonary alveolar proteinosis (PAP), including one fatality, have been reported among workers at a US facility producing ITO \cite{Cummings2010}. The first patient described, a 49 year old non-smoker, noted exertional dyspnoea paroxysmal nocturnal dysp noea after working nine months as a hydrogen furnace operator in a poorly ventilated room where he was exposed to ITO fumes. A high resolution CT scan demonstrated extensive ground-glass opacities, centrilobular nodules, and intralobular and interlobular septal thickening. The DLco was markedly reduced (37\% predicted) and the PaO2 was 59mmHg. Bronchoalveolar lavage demonstrated predominance of vacuolated macrophages and lymphocytes. Subsequent lung biopsy revealed proteinaceous material and globules positive with periodic acid-Schiff (PAS) stain consistent with PAP. Scanning electron microscopy and energy dispersive xray analysis identified the particles within the proteinaceous material as primarily indium. The patient was treated with oral steroids and segmental then whole lung lavage but succumbed to respiratory failure six years after presentation. A second patient, a 39 year old smoker, had a similar presentation and also had biopsy-proven pulmonary alveolar proteinosis with inductively coupled plasma/mass spectrometry confirmed indium (29.3\ensuremath{\mu}/g) in his lung tissue. 
-
-A subsequent review of ten cases from three countries (Japan, US, China) of indium lung disease of whom seven were categorized as having ILD and three PAP reported common pulmonary histological features of intra-alveolar exudate typical of alveolar proteinosis (n=9), cholesterol clefts and granulomas (n=10), and fibrosis (n=9) \cite{Cummings2012}. The PAP-classified cases had presented with a shorter latency from first exposure (1-2 years) compared to those diagnosed as having ILD cases (4-13 years), suggesting a time-related spectrum of response and disease progression. Workplace surveillance in a US ITO production facility found that spirometric abnormalities frequent even in asymptomatic workers (14 of 45 screened; 31\%) \cite{Cummings2013}. 
-The experience with rare earth pneumncosis, radionuclides, and ITO-induced lung disease underscores the point that unusual interstitial disease even if attributed to a discrete cause, there can be multiple pathological manifestations. Further, such exposures may also contribute to disease misidentified as due to other causes or simply labeled as “idiopathic.”    
-
-
-\subsubsection{Parenchymal Lung Responses to Synthetic Fibers}
-
-As opposed to the fibrotic lung responses to the inorganic dusts and fumes summarized in the preceding sections, other patterns of idiopathic pneumonia can be associated with the inhalation of synthetic fibers, in particular those categorized generically as flock. Flock is a powder-like material comprised of very short fibres (0.2-5mm) used in various industrial applications, including as covering on adhesive-coated fabrics in a way that produces a velvety surface. Flock is manufactured by cutting nylon, rayon, polyester, and other synthetic fibres and filaments. There are two main flock cutting means employed. On is “guillotine” cutting which is produces fibres of a precisely defined length and is the most common method use industrially. The second is “rotary” cutting, which generates fibres of less-precisely defined length and may be more prone to the production of particles  with adverse respiratory effects \cite{Kern1998}.
-
-In retrospect, the initial case series of what was later recognized to be nylon flock worker’s lung originated in a manufacturing plant in Ontario, Canada where flock was produced using rotary cutters \cite{Lougheed1995}. That outbreak, however, was misattributed to mold exposure and pathologically classified as an- other idiopathic interstitial disease, desquamative interstitial pneumonia (DIP). Subsequent follow up of this cohort to study the natural history of flock worker’s lung \cite{Turcotte2013} found three main patterns after exposure cessation: complete resolution (of symptoms and radiographic and pulmonary function test abnormalities); stable persistence of symptoms, radiographic and pulmonary function test abnormalities; and a progressive decline in pulmonary function causing death from respiratory failure and secondary pulmonary hypertension. Low baseline diffusing capacity (DLco), a marker of interstitial disease, was associated with the persistence and progression of disease.
-
-\cite{Kern1998}  described two cases of interstitial lung disease in a nylon flocking plant (Microfibres in Rhode Island) which prompted a case-finding survey and retrospective cohort study. The index case, a 34 year old previously asymp- tomatic textile worker developed work-related dyspnoea that initially resolved on holidays then progressed over time to fixed exertional dyspnoea and chronic dry cough. Pulmonary function testing showed a moderate restrictive deficit and a re- duced DLco (29\% of predicted). Chest CT imaging showed diffuse, striking ground glass opacities and patchy areas of consolidation, predominantly in the lower lobes. The patient was presumptively diagnosed with extrinsic alveolitis, removed from the work, and treated with glucocorticosteroids to good effect. A second case, aged 28, who had worked at the same manufacturing plant presented with chronic cough, dyspnea, and pleuritic chest pain. He also manifested a restrictive lung function and a reduced DLco, with a chest CT demonstrating diffuse micronodular densities and patchy mild ground glass opacities. Transbronchial biopsy revealed a dense lymphocytic infiltrate and a subsequent open lung biopsy found diffuse interstitial lung disease characterized by bronchiolocentric nodular and diffuse interstitial fibrosis without granulomas. In this case too, a presumptive diagnosis of extrinsic alveolitis initially was made.
-
-These diagnoses were later revised in favor of a new entity, flock-related interstitial lung disease (“flock worker’s lung”). When a case definition of abnormal bronchoalveolar lavage cellularity, restrictive lung function, and chest CT showing diffuse ground glass opacity or micronodularity was applied to current and former workers form the same plant, eight additional cases of flock workers lung were identified. All improved with removal from further exposure. A further five cases, bring the total to 19 were eventually reported \cite{Kern2000}. In a field investigation, the U.S. National Institute for Occupational Safety and Health (NIOSH) identified the presence of respirable-sized nylon particulates in bulk samples of rotary-cut flock and in workroom air in this manufacturing process, consistent with inhalation of these fibers being causally related to the observed respiratory syndrome \cite{Burkhart1999}.
-
-In addition to nylon-associated flock-workers lung, other similar outbreaks of disease have been linked to inhalation exposure to rayon and polyethylene textile fibers similarly cut into very fine particles using rotary cutters. This lends support to the presumption that the physical characteristics of synthetic fiber flock, rather than its chemical make-up, drive the pathophysiology of this condition.
-
-\cite{Atis2005} carried out a cross-sectional study at a plant in Turkey comparing 50 polypropylene flock workers with 45 controls. Flock workers worked amidst visible clouds of dust for 8h per day six days a week using using rotary cutters in two small rooms with inadequate ventilation and they did not use respiratory protective equipment. All workers with direct exposure to polypropylene flock (N=58) were invited to participate and 50 agreed forming the study group. Control group members were randomly sampled from workers at the plant who did not have direct exposure to polypropylene flock. Eligibility criteria required that participants had worked in the same part of the factory for at least three years. All subjects completed a respiratory questionnaire and underwent a range of tests. Work-related respiratory symptoms were reported in 26\% of the exposed subjects and in 13.3\% of the controls, a difference which was not statistically significant. Logistic regression analysis showed that the risk of respiratory symptoms increased 3.6 fold in polypropylene flocking workers when compared to controls (odds ratio: 3.6; 95\% confidence interval (CI): 1.0712.02). Multivariate analyses controlling for age, sex, and tobacco use showed that being a worker in the polypropylene flock industry (p = 0.001) and the duration of work in years (p = 0.03) were predictive factors for impairment of pulmonary function. HRCTs (done in only 10 participants) revealed diffuse ground glass attenuation in two subjects, focal ground glass appearance in one subject, and bronchial thickening in four subjects. In addition to this cohort from Turkey, there has also been a separately reported case series from Spain of lung disease among polyethylene (as opposed to polypropylene) flock workers showing CT abnormalities in 3 of 15 and in the patient most affected follicular bronchiolitis on lung biopsy \cite{Barroso2002}	.
-
-Employee concern at a US plant with a greeting card manufacture process in which rayon flock was used prompted a cross-sectional survey which included an environmental evaluation, standardized questionnaire, spirometry, DLco testing, and methacholine challenge testing \cite{Antao2007}. Of 239 completing questionnaires, 146 47 reported cleaning flocking equipment with compressed air (35 of these were also flock workers). UDust and fiber samples were largely below detection limits,but peaks were observed when cleaning with compressed air was carried out. Workers who cleaned for 1h per week or more using compressed air had a higher symptom prevence of eye, nasal, and throat irritation, sinus symptoms, chronic cough, and medically diagnosed asthma. Although no statistically significant relationship was observed between flock exposure and spirometry results or methacholine challenge testing,  the number of years of exposure to flock was significantly associated with abnormally low VA.
-
-(Lung disease related to synthetic fibers was suspected from case reports beginning in 1975, but confirmation required the recognition of case clusters, characterization of workplace exposures, and elimination of other possible causes. Investigations in the flock industry in the 1990s identified occupational exposure to nylon flock as associated with a unique bronchiolar histopathology, consisting of lymphocytic bronchiolitis and peribronchiolitis with lymphoid hyperplasia
-represented by lymphoid aggregates and follicles.  Flock is cut fiber of small diameter that is used to produce a velvet-like coating when applied to adhesive-coated fabric or other surfaces, such as automotive glove compartments and jewelry boxes.  Nylon respirable dust is generated in the cutting of long filaments into flock, which is itself too large to reach the bronchioles.  Although the lymphocytic bronchiolitis is a characteristic distinctive finding, a variety of other
-histopathologic findings were present in a portion of cases recognized in the setting of case clusters, including acute alveolar damage, BOOP, and increased macrophages with some foci reminiscent of desquamative interstitial pneumonitis. Reports of clinical and epidemiologic evidence of bronchiolar disease in nylon flock workers stimulated recognition of clinical and subclinical interstitial lung disease in work settings with other synthetic dusts, including polyethylene flock,
-polypropylene flock used in making plastic tows for fishing nets, and rayon flock in greeting card manufacture. (Kreiss 2013; Kern 1998; Eschenbacher 1999; Boag 1999; Kern 2000; Lougheed 1995; Washko 2000; Daroowalla 2005; Barroso 2002; Atis 2005; Antao 2007.))
-
-\subsubsection{Desquamative Interstitial Pneumonia}
-Desquamative interstitial pneumonia (DIP) is characterized by the accumulation of numerous pigmented macrophages within the most distal air-spaces of the lung and, sometimes, the presence of giant cells. DIP is usually associated with smoking, but is also recognized to occur in non-smokers, prompting further investigations into its causes \cite{Godbert2013}. Scanning electron microscopy and energy-dispersive xray analysis of 62 cases of biopsy proven cases of DIP found tissue levels of inorganic particles were markedly higher than controls \cite{Abraham1981}.
-
-Of note, a DIP-like pattern has been reported in association with several occupational exposures, all at the case report level. Two cases have been reported in aluminum welders. One was a case of DIP in a 35-year old \cite{Herbert1982} who presented with a two month history of exertional dyspnoea and a slight cough, having worked as an electric arc welder for 16 years with exposed to aluminum, magnesium and other metal fumes. He manifested a restrictive pulmonary deficit a reduced DLco on lung function testing. Initially diagnosed with a pulmonary embolism, a subsequent lung biopsy showed diffuse chronic interstitial fibrosis which was predominantly desquamative but also had areas of patchy mural fibrosis. There were numerous intra-alveolar cells with abundant cytoplasm and vesicular nuclei containing refractive, but not birefringent brown particles that stained positive with Prussian blue positive. Transmission electron microscopy and energy dispersive x-ray analysis showed substantial aluminum dust tissue burden. A second case was reported in a 57 year old aluminum welder with a two month history of progressive dyspnoea, dry cough, decreased exercise tolerance and hypoxia. For five years prior to presentation he had worked as an aluminum welder which involved grinding aluminum. A CT chest revealed bilateral ground glass opacities in the upper and mid lung zones. Pulmonary function testing demonstrated a moderate restrictive ventilatory deficit with a severe impairment in gas transfer capacity. Predominant macrophages were seen on bronchoalveolar lavage. The diagnosis of DIP was made on the basis of open lung biopsy \cite{Chelvanathan2011}. An association between occupational dust exposure and DIP has been also been  observed in a drywall construction worker exposed to crysotile asbestos fibers \cite{Freed1991}, and single cases have been reported following exposure to fire-extinguisher powder, diesel fumes, beryllium and copper dust \cite{Craig2004}, and solder fume exposure  \cite{Moon1999}. A further single case has been described in a 28 year old never-smoker who served in US Navy in Gulf War and was involved in sanding ships for 18 months, but the specific exposure was not elucidated \cite{SafdarM2011}. Although hard metal lung disease, due to tungsten carbide-cobalt, can have elements of desquamation, the hallmark of its pathology is the presence of giant cells. Because giant cell pneumonia is considered to be due to hard metal until proven otherwise, newer guidelines have removed this condition from consideration among otherwise idiopathic pneumonias, despite the fact that cases without apparent exposure to this causal agent have been reported \cite{Blanc2007}.  Hard metal lung disease is discussed in greater depth elsewhere in this text.
-
-As noted, DIP is usually associated with cigarette smoke exposure and is along a histologic spectrum of reposnses that also includes respiratory bronchiolitis interstitial lung disease (RB-ILD), Both RB-ILD and DIP are characterized by macrophage accumulation with the distinction between them dependent on the extent and distribution of this process (and also reflected by the pattern of disease on HRCT). In recent guidelines the term ’smoking-related interstitial lung disease’ has been used to refer to both of these conditions \cite{Travis2013}. 
-
-Despite the dominance of smoking for RV-ILD, like a small number of cases due to occupational exposures, predominantly work-related second hand smoking, have been reported.
-A clinicopathological review of 10 specimens identified as having a histopathological pattern of RBILD \cite{Moon1999} identified one case who was a never smoker but who had occupational exposure to solder fume. This patient was a 35 year old female who had a HRCT scan that favored the diagnosis of DIP, a restrictive ventilatory defect, and a reduced DLco (59\% of predicted). A larger clinicopathological review of 109 specimens with a histopathological pattern of RBILD found two cases among apparent never-smokers \cite{Fraig2002}. One had substantial non-cuppational second hand smoke exposure while the other (a 77 year-old male who reported minimal exposure to smoking, having had only a three year history of intermittent smoking 54 years previously) he reported a potentially significant occupational history, having worked as a mechanic in an environment with diesel fume and fiberglass dust. Another case of RBILD was reported in a 52 year-old man with a 30 pack-year smoking history and a 40 year history of work repairing diesel engines is reported \cite{Canessa2004}. The authors suggest that the patient’s RBILD was due to both smoking and occupational exposure but do not describe the occupational exposures in detail or provide evidence for such exposures being causal. Another case describes a 54 year old non-smoker with an 8 year history of heavy occupational exposure to secondhand cigarette smoke during her work as a waitress \cite{Woo2007}. A chest radiograph showed diffusely scattered small micronodules bilaterally and high-resolution CT scan showed evenly distributed ill-defined centrilobular nodules and ground-glass throughout both lung fields. A lung biopsy was obtained showed a respiratory bronchiolitis pattern with the accumulation of pigment-laden macrophages within the alveolar spaces consistent with RB-ILD.
-
-These case reports do not take away from the dominance of direct cigarette smoking in the etiology of both DIP and RB-ILD. Nonetheless, they do raise the possibility that occupational factors can come into play and should be considered for both conditions.
-
-\subsubsection{Lipoid pneumonia}
-Mineral oils are used as coolants, cutting oils, or lubricants in several industrial processes and often give rise to respirable aerosolized mists. Although lipoid pneumonia is generally approached as a self-medication related misadventure, work-related lipoid pneumonia due to mineral oil aerosols and related inhalation exposures is a well-established phenomenon.
-
-\cite{Cullen1981}  reported five of nine tandem mill operators exposed being referred for evaluation of respiratory complaints prompting examination. Exercise studies revealed that the workers exercise was limited by ventilation and arterial oxygen desaturation before reaching a submaximal heart rate and bronchoscopy, lavage, and biopsy revealed evidence of lipoid pneumonia. Assessment of the mill revealed levels of respirable oil mist measured by personal samplers to be below maximal acceptable levels and the authors speculate that an absence of similar case series may be due to either an unidentified peculiarity of the work process at the particular mill or workers voluntarily removing themselves from the workplace before the development of pronounced radiographic and functional changes.
-
-At the case report level, lipoid pneumonia has been described for a variety of occupations where oils are sprayed. A 59 year old workman is reported to have developed lipoid pneumonia after five years of massive exposure to aerosolized new car paraffin coating as a result of hot water cleaning using a compressed air jet in small workshop without ventilation or respiratory protective equipment \cite{Pujol1990}. Chest CT showed diffuse interstitial disease; transbronchial biopsy showed mixed alveolitis including alveolar macrophages with abnormal cytoplasmic vacuoles; an open lung biopsy was performed showing interstitial pneumonitis with fibrosis and electron microscopy showed alveolar macrophages with features of paraffin-laden cytoplasmic vacuoles. Cases of occupational lipoid pneumonia have been reported in professional painters as a consequence of workplace exposure to parrafins and oily sprays, including oil entrained in an air-supplied respirator  \cite{AbadFernandez2003, Carby2000}. Other reports of occupational lipoid pneumonia include a cash register repair man with a 17 year history of regularly spraying machines with a naphtha solvent, and later a grade 10 liquid petrolatum, for lubrication \cite{PROUDFIT1950} and a 30 year old aircraft mechanic developing lipoid pneumonia after employing the use of a spray to clean aircraft engines that was comprised of one-half kerosene and one-half cleansing agent which was composed of 50\% vegetable oil soap \cite{FOE1954}.
-
-Finally, a 24-year old developing lipid pneumonia, not as a result of oil being sprayed, but following inhalation of burning fat fume has been
-reported \cite{Oldenburger1972}. Another oil combustion product inhalation scenario has been described as a cause of dendriform pulmonary ossification in three patients, two of whome were exposed occupationally \cite{Martinez2008}. (This rare pathological response was noted earlier in the conext of rare earth pneumoconiosis. The first hydrocarbon-exposed patient worked for two years burning hospital waste in an incineration oven where he was exposed to diesel oil fume in an environment with limited ventilation. The patient did not have respiratory symptoms at the time, but 22 years after the end of exposure radiographic changes were detected. The second patient had a history of sleeping four hours every other night inside a turned-off metallurgy oven for eight months. The oven used kerosene combustion fuel. Fifteen years after the end of exposure the patient developed wheezing episodes that initially were itreated as asthma until CT findings led to a bipsy and tissue diagnosis. 
-
-
-\subsubsection{Airway centered interstitial fibrosis}
-Airway centered interstitial fibrosis is a rare histopathological pattern that has been described in small retrospective case series. The initial case series \cite{Yousem2002} of this entity reported 10 patients with a similar histological appearance to hypersensitivity pneumonitis but without interstitial granulomas who had a striking centrilobular and bronchiolocentric concentration of chronic inflammatory cell infiltrate. No identifiable cause could be found for the cases and, at a mean follow-up of four years, a third had died from their respiratory disease and over half had persistent or progressive disease, suggesting a more aggressive disease process than hypersensitivity pneumonitis. A later series \cite{Churg2004} described 12 patients with small airway-centered interstitial fibrosis. The histopathology differed from the original series in that fibrosis around large airways and microscopic evidence of fibrosis around the small airways, suggesting interstitial fibrosis, was also present. The patients presented with chronic cough and progressive dyspnoea. Seven of the patients were never-smokers and eight had possible occupational or environmental exposures including to wood smoke, birds, cotton, and chalk dust. Chest radiographs for the patients were always abnormal and the most common pattern seen was diffuse reticulonodular infiltrates with central predominance, thickening of the bronchial walls, and small central ring shadows. CT scans were available in five patients and the main abnormalities seen were peribronchovascular interstitial thickening and traction bronchiectasis with thickened airway walls and surrounding fibrosis. Both cases series showed a female preponderance, evidence of restriction and impaired gas exchange on pulmonary function studies, and an aggressive course in some patients.
-
-A further single case of airway centered interstitial fibrosis in a patient with exposure to cleaning product has been reported \cite{Serrano2006}. A 51 year old cleaner presented to the outpatients department of a Spanish hospital with dry cough and progressive dyspnoea. A chest radiograph showed a basal reticulonodular shadowing pattern. Lung function testing showed a restrictive ventilatory defect and diffusing capacity was reduced (47\% predicted). The patient was an ex-smoker with a 10 pack year history, lumbar scoliosis, and a history of acute hepatitis and recurrent renal colic. In her work as cleaner she washed floors in a poorly ventilated area using cleaning solution which contained 25\% hydrochloric acid, 55\% sodium hydroxide (pH, 14), surfactants, and glycols, over a four year period. Despite treatment with high dose glucocorticosteroids she had a progressive decline in her FVC and diffusing capacity.
-
-\subsubsection{Eosinophilic pneumonia}
-\cite{Shorr2004}  reported a case series patients with acute eosinophilic pneu- monia (AEP). Eighteen patients were identified among 183000 military personnel deployed in or near Iraq during the 13 month study period March 2003 - March 2004. The case definition required patients to report a febrile illness followed by the development of respiratory symptoms such as cough, dyspnoea, or both. Symptoms had to be present for less than a month and the patient had to have infiltrates on chest radiograph. Patients with evidence of pulmonary eosinophilia based on either bronchoalveolar lavage (BAL) or lung biopsy were classified as definite cases of AEP (N = 7).  Patients who did not undergo BAL or biopsy but who developed peripheral eosinophilia (total eosinophil count,\ensuremath{>}250 cells x 10\textsuperscript{3}/mL; percentage of eosinophils,  \ensuremath{\geq}10\% of differential cell count) were categorized as probable cases of AEP (N = 11). All cases were extensively investigated for parasite infection and other infective pathologies as well as autoimmune conditions associated with pulmonary eosinophila. Two patients died. A standardized questionnaire was administered to cases and a sample of 72 controls. Controls were military personal without AEP recruited from respective military units of the two patients who died. All cases used tobacco, with 78\% recently beginning to smoke. All but one reported significant exposure to fine airborne sand or dust. Compared with the control group a higher proportion of cases smoked (100\% vs 67\%) and had recently started smoking (78\% vs 3\%). Fine airborne sand or dust exposure was similar between the two groups (94\% vs 97\%). The authors speculate that the combination of new onset smoking and dust exposure may have been causative. A second case series of 44 military personnel with AEP associated with smoking is also reported \cite{Sine2011}. AEP has also been reported in conjunction with smoking and firework fume inhalation \cite{Hirai2000}, indoor renovation work, gasoline tank cleaning, explosion of a tear gas bomb \cite{Philit2002}, and in a fireman with exposure to high concentrations of dust from the world trade center during rescue efforts following the September 11th, 2001, terrorist attack \cite{Rom2002}.
-
-
-\subsubsection{Anthracofibrosis}
-Anthracofibrosis is defined as narrowing of the bronchial lumen associated with black pigmentation (anthracosis) of the overlying mucosa. It is typically seen in the presence of active TB infection and absence of pneumoconiosis  However, several recent case series have described anthracofibrosis occurring in the absence of TB in patients with occupational and environmental dust exposures. \cite{Naccache2008} report three cases of anthracofibrosis occurring in patients with no exposure to TB and which they attribute as due to mixed mineral dusts containing free crystalline silica and other silicates exposure on the basis of occupational history and mineralogical micronalysis using transmission electron microscopy. One of the patients was previously a forklift driver at a foundry and a solderer at a metallurgy plant with exposure to aluminum and silica, one a bricklayer with silica and asphalt exposure, and one a stonemason with silica exposure.
-\cite{Wynn2008} report a series of seven patients who all presented in a manner which arose the suspicion of lung cancer, prompting bronchoscopy and subsequent diagnosis of anthracofibrosis. Six of the seven cases had no exposure to TB but did have potentially causal occupational exposures. Three patients were exposed to tile dust, of these, two worked at a tile making factory and one was a tiler. Two had previously worked as coal miners, and one had been exposed to asbestos, coal, and flour dust in his work as an engineer.
-\cite{Sigari2009} report a series of 487 patients in Iran with anthracosis and 291 with anthracofibrosis.  Almost half of the patients were female nonsmokers, and it was suggested that the condition was caused mostly by domestic wood fires used for cooking (which can be considered a non-salaried occupational exposure). Male patients included farmers, manual workers, miners, and bakers.\cite{Kim2009} describe 333 patients in Korea with anthracofibrosis diagnosed between 1998 and 2004, of which two thirds had no exposure to pulmonary TB. All patients had long-term exposure to biomass smoke, all male patients were farmers and all female patients were housewives.
-
-\subsubsection{NSIP and Acute Lymphocytic Pneumonia}
-Occupational NSIP has been described in two case reports. The first reports a 50 year-old smoker (20-pack year history) and curry sauce factory worker with a 13 year history of exposure to curry powder dust containing a mix of ground spices and pepper \cite{Ando2006} . CT chest revealed multiple irregular consolidations along with bronchovascular bundles, biapical cystic air spaces, and trivial pleural effusion. A VATS lung biopsy showed a cellular and fibrosing NSIP pattern. Lymphocyte stimulation tests (LST) using the patients peripheral blood lymphocytes were positive curry powder, ground black pepper, and ground white pepper used at the factory. The patient was treated with azathioprine and prednisolone but went on to develop bilateral pneumothoraces and die from ventilatory insufficiency with hypercapnia. THe second reports a 62 year old hospital pharmacist with clonzapine dust exposure as a result of crushing upto 5000 clonzapine tablets a month in a small poorly ventilated room. Symptoms and radiological signs resolved fully with cessation of exposure. \cite{Lewis2012}
-
-There has been only a single case report of what was categorized as Acute Lymphocytic Pneumonia. \cite{Schauble1994} reported a 36 year-old asymptomatic crematorium worker with six years of heavy dust exposure on the job who participated in a research program as a healthy volunteer and was incidentally found to have lymphocytosis on BAL. 
-
-\subsubsection{Obliterative Bronchiolitis}
-Obliterative bronchiolitis has been described in association with exposures to oxides of nitrogen, sulfur dioxide, bromine compounds, thionyl chloride, the btter flavoring chemical diacetyl, fiberglass-reinforced plastics manufacture, and in U.S. soldiers returning from deployments in Iraq and Afghanistan.  Cohort studies of diacetyl-exposed workers have demonstrated excess chest symptoms and functional abnormalities alongside clinical cases of disease.
-
-\subsubsection{Diffuse Pulmonary Hemorrhage}
-Ahmad, D., et al. "Pulmonary haemorrhage and haemolytic anaemia due to trimellitic anhydride." The Lancet 314.8138 (1979): 328-330.
-Kaplan, Vladimir, et al. "Pulmonary hemorrhage due to inhalation of vapor containing pyromellitic dianhydride." Chest 104.2 (1993): 644-645.
-Patterson, Roy, et al. "Immunologic hemorrhagic pneumonia caused by isocyanates." American Journal of Respiratory and Critical Care Medicine 141.1 (1990): 226-230.
-
-\subsubsection{Giant Cell Interstitial Pneumonia (Hard Metal Lung Disease)}
-Nemery B, Nagels J, Verbeken E, Dinsdale D, Demendts M. Rapidly
-fatal progression of cobalt lung in a diamond polisher. Am Rev Respir
-Dis 1990;141:1373–1378. - giant cell interstitial pneumonia
-Tanaka, Junichi, et al. "An observational study of giant cell interstitial pneumonia and lung fibrosis in hard metal lung disease." BMJ open 4.3 (2014): e004407.
-Terui, Hiroya, et al. "Two cases of hard metal lung disease showing gradual improvement in pulmonary function after avoiding dust exposure." Journal of occupational medicine and toxicology 10.1 (2015): 29.
-Mizutani, Rafael Futoshi, et al. "Hard metal lung disease: a case series." Jornal Brasileiro de Pneumologia 42.6 (2016): 447-452.
-Takada, Toshinori, Hiroshi Moriyama, and Fumitake Gejyo. "Is giant cell interstitial pneumonitis synonymous with hard metal lung disease?." American journal of respiratory and critical care medicine 176.8 (2007): 834-835.
-Khoor, Andras, et al. "Giant cell interstitial pneumonia in patients without hard metal exposure: analysis of 3 cases and review of the literature." Human pathology 50 (2016): 176-182.
-
-%other interstitial pneumonia section?
-
-%is exluding Lee2015 reasonable?
-
-%?plausibility
-%epi and experimental evidence
-
-%reviews of occupational ILD cover IPF
-%
-%something on difficulty looking at causes of rare disease
-%+moving targets nomenclature wise
-%?ripped from chapter 25?
-%need to decide if include additional sources e.g glazer also published review in clin pulm med and an ers chapter (neither indexed by pubmed)
-
-section{Meta-analysis}
-
-\subsection{IPF}
-
-\subsubsection{Study details}
-
-\begin{table}   
-     \begin{tabular}{p{3.5cm}p{3cm}p{2cm}p{2cm}p{3.5cm}}
-     \textbf{First author, year} & \textbf{Cases exposed n/N (\%)} & \textbf{OR or PMR (95\% CI)} & \textbf{PAR} &   \textbf{Notes} \\
-     \midrule
-   Scott, 1990 &  27/40 (68) &  1.32 (0.84-2.04) &  16.00\% &  controls matched for age and sex \\
- Iwai, 1994 &  n/615 (\%) &  2.0 (1.16-3.08) &  x\% &  autopsy; includes acute, chronic, and unknown time course cases; dust and organic solvent vapor related jobs; non-respiratory death controls matched for sex, age, residential area \\
- Mullen, 1998 &  6/15 (40) &  2.37 (0.67-8.44) &  23.00\% &  controls matched for age and sex \\
- Miyake, 2005 &  33/102 (32) &  5.61 (2.12-17.89) &  26.00\% &  adjusted for age, sex, and region \\
- Gustafson, 2007 &  86/140 (61) &  1.1 (0.71-1.72) &  6.00\% &  “any occupational exposure”; stratified by sex, year of diagnosis, birth year, and smoking \\
- Garcia-Sancho Figueroa, 2010 &  55/97 (57) &  1.2 (0.8-1.9) &  10.00\% &  matching criteria not mentioned; controls with resp disease \\
- Garcia-Sancho, 2011 &  77/100 (77) &  2.8 (1.5-5.5) &  50.00\% &  “dusts/smokes/gases or chemicals”; healthy controls matched for residence, age, sex, ethnic origin; adjusted for other predictive variables (fam hx, former smoker, GERD, DM2) \\
- Koo, 2017 &  43/78 (55) &  2.7 (0.65-10.93) &  35.00\% &  matched for age, sex, place of residence, model adjusted for environmental exposure, military exposure, and smoking \\
-     \bottomrule
-     \end{tabular}                 
-     \caption{OR and PAR for all occupational dust exposures in IPF case-control studies looking at occupational exposure}
-     \label{table:ipfalldust}
- \end{table}
-
-
-
-\begin{table}   
-     \begin{tabular}{p{3.5cm}p{3cm}p{2cm}p{2cm}p{3.5cm}}
-     \textbf{First author, year} & \textbf{Cases exposed n/N (\%)} & \textbf{OR or PMR (95\% CI)} & \textbf{PAR} &   \textbf{Notes} \\
-     \midrule
-  Scott, 1990 &  6/40 (15) &  10.97 (2.30-52.4) &  14.00\% &  controls matched for age and sex \\
- Iwai, 1994 &  n/86 (\%) &  1.34 (1.14-1.59) &  x\% &  Cd, Cr, Pb, Zn metal production and mine workers; healthy controls matched for sex, age, residential area \\
- Hubbard, 1996 &  54/218 (25) &  1.68 (1.07-2.65) &  10.30\% &  questionnaire; adjusted for smoking and exposure to wood dust; PAR reported by authors \\
- Hubbard 2000 &  13/22 (59) &  1.08 (0.44-2.65) &  4.00\% &  adjusted for age and sex; mortality study \\
- Baumgartner 2000 &  25/248 (10) &  2.0 (1.0-4.0) &  5.00\% &  adjusted for age and smoking \\
- Miyake 2005 &  12/102 (12) &  9.55 (1.68-181.12) &  11.00\% &  adjusted for age, sex, and region \\
- Gustafson 2007 &  25/140 (18) &  0.9 (0.51-1.59) &  NA &  stratified by sex, year of diagnosis, birth year, and smoking \\
- Awadalla 2012 &  17/95 (18) &  1.58 (0.69-3.61) &  7.00\% &  men; adjusted for age, residence, smoking \\
- Paolocci, 2013 &  9/65 (14) &  2.80 (1.08-7.23) &  9.00\% &  adjusted for age, gender, smoking \\
- Koo 2017 &  21/78 (27) &  4.97 (1.36-18.17) &  22.00\% &  matched for age, sex, place of residence, model adjusted for environmental exposure, military exposure, and smoking \\
-     \bottomrule
-     \end{tabular}                 
-     \caption{OR and PAR for all metal dust exposures in IPF case-control studies looking at occupational exposure}
-     \label{table:ipfmetaldust}
- \end{table}
-
-
-
-\begin{table}   
-     \begin{tabular}{p{3.5cm}p{3cm}p{2cm}p{2cm}p{3.5cm}}
-     \textbf{First author, year} & \textbf{Cases exposed n/N (\%)} & \textbf{OR or PMR (95\% CI)} & \textbf{PAR} &   \textbf{Notes} \\
-     \midrule
-  Scott, 1990 &  6/40 (15) &  2.94 (0.87-9.90) &  10.00\% &  controls matched for age and sex \\
- Hubbard, 1996 &  30/218 (14) &  1.71 (1.01-2.92) &  5.30\% &  questionnaire; adjusted for smoking and exposure to metal dust; PAR reported by authors \\
- Mullen, 1998 &  2/15 (13) &  3.30 (0.42-25.8) &  9.00\% &  controls matched for age and sex \\
- Baumgartner, 2000 &  20/244 (8) &  1.6 (0.8-3.3) &  3.00\% &  adjusted for age and smoking \\
- Miyake, 2005 &  5/102 (5) &  6.03 (0.32- 112.4)  &  4.00\% &  no cases in 59 controls; substituted 0.5 to get OR \\
- Gustafson, 2007 &  22/140 (16) &  1.2 (0.65-2.23) &  3.00\% &  stratified by sex, year of diagnosis, birth year, and smoking \\
- Awadalla, 2012 &  14/95 (15) &  2.56 (1.02-7.01) &  9.00\% &  men; adjusted for age, residence, smoking \\
- Awadalla, 2012 &  8/106 (8) &  3.48 (0.67-18.16) &  8.00\% &  women; adjusted for age, residence, smoking \\
- Paolocci, 2013 &  5/65 (8) &  1.11 (0.37-3.31) &  1.00\% &  softwood dust; adjusted for age, gender, smoking \\
- Paolocci, 2013 &  4/65 (6) &  0.86 (0.26-2.78) &  NA &  hardwood dust; adjusted for age, gender, smoking \\
- Koo, 2017 &  6/78 (8) &  2.51 (0.52-12.28) &  5.00\% &  matched for age, sex, place of residence, model adjusted for environmental exposure, military exposure, and smoking \\
-     \end{tabular}                 
-     \caption{OR and PAR for all wood dust exposures in IPF case-control studies looking at occupational exposure}
-     \label{table:ipfwooddust}
- \end{table}
-
-
-\begin{table}   
-     \begin{tabular}{p{3.5cm}p{3cm}p{2cm}p{2cm}p{3.5cm}}
-     \textbf{First author, year} & \textbf{Cases exposed n/N (\%)} & \textbf{OR or PMR (95\% CI)} & \textbf{PAR} &   \textbf{Notes} \\
-     \midrule
-  Scott, 1990 &  5/40 (13) &  10.89 (1.24-96.0) &  12.00\% &  cattle exposure; controls matched for age and sex \\
- Iwai, 1994 &  n/86 (\%) &  3.01 (1.29-7.43) &  x\% &  agricultural area residence; healthy controls matched for sex, age, residential area \\
- Baumgartner, 2000 &  44/240 (18) &  1.6 (1.0-2.5) &  7.00\% &  farming; adjusted for age and smoking \\
- Miyake, 2005 &  7/102 (7) &  0.55 (0.16-1.89) &  NA &  farming, fishing, or forestry; adjusted for age, sex, and region \\
- Awadalla, 2012 &  20/95 (21) &  1.00 (0.44-2.28) &  NA &  men; adjusted for age, residence, smoking \\
- Awadalla, 2012 &  22/106 (21) &  3.34 (1.17-10.12) &  15.00\% &  women; adjusted for age, residence, smoking \\
-     \bottomrule
-     \end{tabular}                 
-     \caption{OR and PAR for agricultural dust exposures in IPF case-control studies looking at occupational exposure}
-     \label{table:ipfagridust}
- \end{table}                                                                                                                                                                                        
-
-
-
-
-
-
-\clearpage
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%
-\makeatletter
- \def\@biblabel#1{#1}
-\makeatother
-%%%%%%%% gets rid of bracket around numbers in bibliography
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\bibliographystyle{unsrtnat}
-\bibliography{taskforce}
-
-\end{document}
+      \end{document}

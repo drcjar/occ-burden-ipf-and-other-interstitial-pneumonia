@@ -1,9 +1,9 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis16_03_17.smcl
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis28_07_17.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res} 3 Jul 2017, 09:13:52
+ {txt}opened on:  {res}28 Jul 2017, 17:32:47
 {txt}
 {com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/any_dust.csv, clear
 {res}{text}(5 vars, 8 obs)
@@ -219,30 +219,6 @@ where variance_i = ((upper limit - lower limit)/(2*z))^2
 
 {txt}  Test of ES=1 : z= {res}  2.01{txt} p = {res}0.045
 {txt}
-{com}. metabias6 lnor lncilow lnciup, egger
-
-{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
-
-Tests for Publication Bias
-
-Begg's Test
-{res} 
-{txt}  adj. Kendall's Score (P-Q) = {res}      3
-{txt}          Std. Dev. of Score = {res}   1.91 
-{txt}           Number of Studies = {res}      3
-{txt}                          z  = {res}   1.57
-{txt}                    Pr > |z| = {res}  0.117
-{txt}                          z  = {res}   1.04{txt} (continuity corrected)
-                    Pr > |z| = {res}  0.296{txt} (continuity corrected)
-
-Egger's test
-{hline 13}{c TT}{hline 64}
-     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
-{hline 13}{c +}{hline 64}
-       slope {c |}  {res}-1.255316   1.024112    -1.23   0.436    -14.26789    11.75726
-        {txt}bias {c |}  {res} 2.465996   1.605882     1.54   0.367    -17.93867    22.87067
-{txt}{hline 13}{c BT}{hline 64}
-
 {com}. metabias6 or cilow ciup, graph(egger)
 
 {txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
@@ -267,11 +243,71 @@ Egger's test
         {txt}bias {c |}  {res} .9048069     1.4973     0.60   0.578    -3.252364    5.061978
 {txt}{hline 13}{c BT}{hline 64}
 
+{com}. 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/silica_dust.csv, clear 
+{res}{text}(5 vars, 9 obs)
+
+{com}. gen lnor=ln(or)
+{txt}
+{com}. gen lncilow=ln(cilow)
+{txt}
+{com}. gen lnciup=ln(ciup)
+{txt}
+{com}. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year) 
+
+{txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+Scott (1990){col 22}|{res}  1.590{col 35}  0.520     4.790{col 60}  7.00
+{txt}Hubbard (1996){col 22}|{res}  1.760{col 35}  1.010     3.070{col 60} 27.94
+{txt}Mullen (1998){col 22}|{res} 11.000{col 35}  1.050   115.000{col 60}  1.57
+{txt}Baumgartner (2000){col 22}|{res}  3.900{col 35}  1.200    12.700{col 60}  6.20
+{txt}Miyake (2005){col 22}|{res}  1.750{col 35}  0.520     7.010{col 60}  5.10
+{txt}Gustafson (2007){col 22}|{res}  1.400{col 35}  0.740     2.720{col 60} 20.38
+{txt}Awadalla (2012){col 22}|{res}  1.110{col 35}  0.450     2.720{col 60} 10.67
+{txt}Paolocci (2013){col 22}|{res}  1.990{col 35}  0.910     4.350{col 60} 14.11
+{txt}Koo (2017){col 22}|{res}  1.240{col 35}  0.410     3.760{col 60}  7.03
+{txt}---------------------+---------------------------------------------------
+D+L pooled ES{col 22}|{res}  1.704{col 35}  1.270     2.286{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+ Heterogeneity calculated by formula
+  Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
+where variance_i = ((upper limit - lower limit)/(2*z))^2 
+
+  Heterogeneity chi-squared = {res}  6.03{txt} (d.f. = {res}8{txt}) p = {res}0.643
+{txt}  I-squared (variation in ES attributable to heterogeneity) ={res}   0.0%
+{txt}  Estimate of between-study variance Tau-squared = {res} 0.0000
+
+{txt}  Test of ES=1 : z= {res}  3.55{txt} p = {res}0.000
+{txt}
+{com}. metabias6 or cilow ciup, graph(egger)
+
+{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
+
+Tests for Publication Bias
+
+Begg's Test
+{res} 
+{txt}  adj. Kendall's Score (P-Q) = {res}     14
+{txt}          Std. Dev. of Score = {res}   9.59 
+{txt}           Number of Studies = {res}      9
+{txt}                          z  = {res}   1.46
+{txt}                    Pr > |z| = {res}  0.144
+{txt}                          z  = {res}   1.36{txt} (continuity corrected)
+                    Pr > |z| = {res}  0.175{txt} (continuity corrected)
+
+Egger's test
+{hline 13}{c TT}{hline 64}
+     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+       slope {c |}  {res} .0435517   .3475037     0.13   0.904    -.7781641    .8652675
+        {txt}bias {c |}  {res} 1.160705   .7727058     1.50   0.177    -.6664536    2.987864
+{txt}{hline 13}{c BT}{hline 64}
+
 {com}. log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis16_03_17.smcl
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis28_07_17.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res} 3 Jul 2017, 09:14:41
+ {txt}closed on:  {res}28 Jul 2017, 17:33:20
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
