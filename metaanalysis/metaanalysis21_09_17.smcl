@@ -1,9 +1,9 @@
 {smcl}
 {com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis28_07_17.smcl
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis21_09_17.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}18 Sep 2017, 13:48:51
+ {txt}opened on:  {res}22 Sep 2017, 15:36:26
 {txt}
 {com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/any_dust.csv, clear
 {res}{text}(5 vars, 7 obs)
@@ -136,29 +136,29 @@ Egger's test
 
 {txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
-Scott (1990){col 22}|{res}  2.940{col 35}  0.870     9.900{col 60}  5.37
-{txt}Hubbard (1996){col 22}|{res}  1.710{col 35}  1.010     2.920{col 60} 28.19
-{txt}Mullen (1998){col 22}|{res}  3.300{col 35}  0.420    25.800{col 60}  1.87
-{txt}Baumgartner (2000){col 22}|{res}  1.600{col 35}  0.800     3.300{col 60} 15.82
-{txt}Miyake (2005){col 22}|{res}  6.030{col 35}  0.320   112.400{col 60}  0.92
-{txt}Gustafson (2007){col 22}|{res}  1.200{col 35}  0.650     2.230{col 60} 20.90
-{txt}Awadalla (2012){col 22}|{res}  2.560{col 35}  1.020     7.010{col 60}  8.55
-{txt}Awadalla (2012){col 22}|{res}  3.480{col 35}  0.670    18.160{col 60}  2.92
-{txt}Paolocci (2013){col 22}|{res}  1.110{col 35}  0.370     3.310{col 60}  6.62
-{txt}Paolocci (2013){col 22}|{res}  0.860{col 35}  0.260     2.780{col 60}  5.66
-{txt}Koo (2017){col 22}|{res}  2.510{col 35}  0.520    12.280{col 60}  3.18
+Scott (1990){col 22}|{res}  2.940{col 35}  0.870     9.900{col 60}  5.40
+{txt}Hubbard (1996){col 22}|{res}  1.710{col 35}  1.010     2.920{col 60} 28.32
+{txt}Mullen (1998){col 22}|{res}  3.300{col 35}  0.420    25.800{col 60}  1.88
+{txt}Baumgartner (2000){col 22}|{res}  1.600{col 35}  0.800     3.300{col 60} 15.89
+{txt}Miyake (2005){col 22}|{res}  6.030{col 35}  0.320   112.400{col 60}  0.93
+{txt}Gustafson (2007){col 22}|{res}  1.200{col 35}  0.650     2.230{col 60} 21.00
+{txt}Awadalla (2012){col 22}|{res}  2.710{col 35}  1.010     7.370{col 60}  8.08
+{txt}Awadalla (2012){col 22}|{res}  4.320{col 35}  0.840    22.120{col 60}  2.98
+{txt}Paolocci (2013){col 22}|{res}  1.110{col 35}  0.370     3.310{col 60}  6.65
+{txt}Paolocci (2013){col 22}|{res}  0.860{col 35}  0.260     2.780{col 60}  5.68
+{txt}Koo (2017){col 22}|{res}  2.510{col 35}  0.520    12.280{col 60}  3.19
 {txt}---------------------+---------------------------------------------------
-D+L pooled ES{col 22}|{res}  1.657{col 35}  1.250     2.196{col 60}100.00
+D+L pooled ES{col 22}|{res}  1.672{col 35}  1.261     2.218{col 60}100.00
 {txt}---------------------+---------------------------------------------------
  Heterogeneity calculated by formula
   Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
 where variance_i = ((upper limit - lower limit)/(2*z))^2 
 
-  Heterogeneity chi-squared = {res}  6.62{txt} (d.f. = {res}10{txt}) p = {res}0.761
+  Heterogeneity chi-squared = {res}  7.32{txt} (d.f. = {res}10{txt}) p = {res}0.695
 {txt}  I-squared (variation in ES attributable to heterogeneity) ={res}   0.0%
 {txt}  Estimate of between-study variance Tau-squared = {res} 0.0000
 
-{txt}  Test of ES=1 : z= {res}  3.51{txt} p = {res}0.000
+{txt}  Test of ES=1 : z= {res}  3.57{txt} p = {res}0.000
 {txt}
 {com}. metabias6 or cilow ciup, graph(egger)
 
@@ -168,20 +168,20 @@ Tests for Publication Bias
 
 Begg's Test
 {res} 
-{txt}  adj. Kendall's Score (P-Q) = {res}     17
+{txt}  adj. Kendall's Score (P-Q) = {res}     19
 {txt}          Std. Dev. of Score = {res}  12.85 
 {txt}           Number of Studies = {res}     11
-{txt}                          z  = {res}   1.32
-{txt}                    Pr > |z| = {res}  0.186
-{txt}                          z  = {res}   1.25{txt} (continuity corrected)
-                    Pr > |z| = {res}  0.213{txt} (continuity corrected)
+{txt}                          z  = {res}   1.48
+{txt}                    Pr > |z| = {res}  0.139
+{txt}                          z  = {res}   1.40{txt} (continuity corrected)
+                    Pr > |z| = {res}  0.161{txt} (continuity corrected)
 
 Egger's test
 {hline 13}{c TT}{hline 64}
      Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 {hline 13}{c +}{hline 64}
-       slope {c |}  {res} .1083464   .2429746     0.45   0.666    -.4413002    .6579931
-        {txt}bias {c |}  {res} .9234064   .5095045     1.81   0.103    -.2291729    2.075986
+       slope {c |}  {res} .0838421   .2529189     0.33   0.748    -.4883003    .6559845
+        {txt}bias {c |}  {res}   .99979   .5291462     1.89   0.091    -.1972219    2.196802
 {txt}{hline 13}{c BT}{hline 64}
 
 {com}. 
@@ -242,7 +242,7 @@ Egger's test
 
 {com}. 
 . import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/silica_dust.csv, clear 
-{res}{text}(5 vars, 9 obs)
+{res}{text}(5 vars, 8 obs)
 
 {com}. gen lnor=ln(or)
 {txt}
@@ -254,27 +254,26 @@ Egger's test
 
 {txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
-Scott (1990){col 22}|{res}  1.590{col 35}  0.520     4.790{col 60}  7.00
-{txt}Hubbard (1996){col 22}|{res}  1.760{col 35}  1.010     3.070{col 60} 27.94
-{txt}Mullen (1998){col 22}|{res} 11.000{col 35}  1.050   115.000{col 60}  1.57
-{txt}Baumgartner (2000){col 22}|{res}  3.900{col 35}  1.200    12.700{col 60}  6.20
-{txt}Miyake (2005){col 22}|{res}  1.750{col 35}  0.520     7.010{col 60}  5.10
-{txt}Gustafson (2007){col 22}|{res}  1.400{col 35}  0.740     2.720{col 60} 20.38
-{txt}Awadalla (2012){col 22}|{res}  1.110{col 35}  0.450     2.720{col 60} 10.67
-{txt}Paolocci (2013){col 22}|{res}  1.990{col 35}  0.910     4.350{col 60} 14.11
-{txt}Koo (2017){col 22}|{res}  1.240{col 35}  0.410     3.760{col 60}  7.03
+Scott (1990){col 22}|{res}  1.590{col 35}  0.520     4.790{col 60}  9.72
+{txt}Mullen (1998){col 22}|{res} 11.000{col 35}  1.050   115.000{col 60}  2.17
+{txt}Baumgartner (2000){col 22}|{res}  3.900{col 35}  1.200    12.700{col 60}  8.61
+{txt}Miyake (2005){col 22}|{res}  1.750{col 35}  0.520     7.010{col 60}  7.08
+{txt}Gustafson (2007){col 22}|{res}  1.400{col 35}  0.740     2.720{col 60} 28.28
+{txt}Awadalla (2012){col 22}|{res}  1.110{col 35}  0.450     2.720{col 60} 14.80
+{txt}Paolocci (2013){col 22}|{res}  1.990{col 35}  0.910     4.350{col 60} 19.58
+{txt}Koo (2017){col 22}|{res}  1.240{col 35}  0.410     3.760{col 60}  9.76
 {txt}---------------------+---------------------------------------------------
-D+L pooled ES{col 22}|{res}  1.704{col 35}  1.270     2.286{col 60}100.00
+D+L pooled ES{col 22}|{res}  1.682{col 35}  1.190     2.378{col 60}100.00
 {txt}---------------------+---------------------------------------------------
  Heterogeneity calculated by formula
   Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
 where variance_i = ((upper limit - lower limit)/(2*z))^2 
 
-  Heterogeneity chi-squared = {res}  6.03{txt} (d.f. = {res}8{txt}) p = {res}0.643
+  Heterogeneity chi-squared = {res}  6.02{txt} (d.f. = {res}7{txt}) p = {res}0.538
 {txt}  I-squared (variation in ES attributable to heterogeneity) ={res}   0.0%
 {txt}  Estimate of between-study variance Tau-squared = {res} 0.0000
 
-{txt}  Test of ES=1 : z= {res}  3.55{txt} p = {res}0.000
+{txt}  Test of ES=1 : z= {res}  2.95{txt} p = {res}0.003
 {txt}
 {com}. metabias6 or cilow ciup, graph(egger)
 
@@ -284,27 +283,27 @@ Tests for Publication Bias
 
 Begg's Test
 {res} 
-{txt}  adj. Kendall's Score (P-Q) = {res}     14
-{txt}          Std. Dev. of Score = {res}   9.59 
-{txt}           Number of Studies = {res}      9
-{txt}                          z  = {res}   1.46
-{txt}                    Pr > |z| = {res}  0.144
-{txt}                          z  = {res}   1.36{txt} (continuity corrected)
-                    Pr > |z| = {res}  0.175{txt} (continuity corrected)
+{txt}  adj. Kendall's Score (P-Q) = {res}     16
+{txt}          Std. Dev. of Score = {res}   8.08 
+{txt}           Number of Studies = {res}      8
+{txt}                          z  = {res}   1.98
+{txt}                    Pr > |z| = {res}  0.048
+{txt}                          z  = {res}   1.86{txt} (continuity corrected)
+                    Pr > |z| = {res}  0.063{txt} (continuity corrected)
 
 Egger's test
 {hline 13}{c TT}{hline 64}
      Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
 {hline 13}{c +}{hline 64}
-       slope {c |}  {res} .0435517   .3475037     0.13   0.904    -.7781641    .8652675
-        {txt}bias {c |}  {res} 1.160705   .7727058     1.50   0.177    -.6664536    2.987864
+       slope {c |}  {res}-.3162402   .4457427    -0.71   0.505    -1.406933    .7744528
+        {txt}bias {c |}  {res}  1.76092    .892413     1.97   0.096     -.422736    3.944576
 {txt}{hline 13}{c BT}{hline 64}
 
 {com}. log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis28_07_17.smcl
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis21_09_17.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}18 Sep 2017, 13:49:39
+ {txt}closed on:  {res}22 Sep 2017, 15:36:31
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

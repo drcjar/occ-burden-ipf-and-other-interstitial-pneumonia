@@ -1,0 +1,21 @@
+Good question!  It's a rounding issue. I decided to go back and recalculate the PAF so I would have the exact # with decimals (I rounded what's in the table in Word document to a whole number). Then I used that to calculate the n. I didn't know Denis could only use an integer for the calculation, so it probably wasn't necessary to go that route, but oh well!
+
+Again, formula is pc(rr - 1)/rr. Since pc is cases exposed/total cases and we take PAF and multiply by total cases to get attributable cases, it ends up being (cases exposed)(rr - 1)/rr. Does that make sense?
+
+On Oct 18, 2016, at 5:30 AM, Carl Reynolds <carl.reynolds@imperial.ac.uk> wrote:
+
+>
+> Hi Kristin,
+>
+>
+> Please could you explain how you calculated figures for the "Attributable cases (numerator)" ?
+>
+>
+> e.g ANY DUST Scott, 1990 we say PAR is 16%. 0.16*40 = 6.4... You have 6.55. I probably have the wrong end of the stick.
+>
+>
+> Thanks, Carl
+
+
+
+where calculated numerator is 0 (when OR < 1) we use a Freeman-Tukey Double Arcsine Transformation

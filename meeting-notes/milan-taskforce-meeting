@@ -1,0 +1,36 @@
+IPF
+
+Table 1
+
+rename PAF column heading 'occupational proportion'
+
+shift OR and PAF columns to right
+
+add country to first column
+
+new column for study type second column
+
+new column for N cases third column
+
+lose row 2 + 3 (check and email author, Iwai)  - need to know how many cases are exposed (numerator) and number of cases (denominator)
+
+Table 2
+
+remove Iwai study that doesn't contribute; make it so that risk estimate matches pooled OR and PAF
+add column that references studies used 
+
+cross check metaprop for kristin and my studies with Dennis
+
+update ipf search method
+
+lose pooled OR
+
+ensure use random or fixed effect according to I^2
+
+ensure serach uptodate as of oct 1st 2017
+
+make 225 word edition
+
+2/52 deadline
+
+

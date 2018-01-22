@@ -1,9 +1,9 @@
 {smcl}
-{com}{sf}{ul off}{txt}{.-}
+{txt}{sf}{ul off}{.-}
       name:  {res}<unnamed>
-       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis28_07_17.smcl
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis18_09_17.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}18 Sep 2017, 13:48:51
+ {txt}opened on:  {res}18 Sep 2017, 13:50:35
 {txt}
 {com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/any_dust.csv, clear
 {res}{text}(5 vars, 7 obs)
@@ -302,9 +302,9 @@ Egger's test
 
 {com}. log close
       {txt}name:  {res}<unnamed>
-       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis28_07_17.smcl
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis18_09_17.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}18 Sep 2017, 13:49:39
+ {txt}closed on:  {res}18 Sep 2017, 13:54:22
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

@@ -1,4 +1,4 @@
-log using "/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis28_07_17.smcl", replace
+log using "/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis25_09_17.smcl", replace
 import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/any_dust.csv, clear
 gen lnor=ln(or)
 gen lncilow=ln(cilow)

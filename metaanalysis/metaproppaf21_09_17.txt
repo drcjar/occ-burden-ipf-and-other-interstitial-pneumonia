@@ -1,0 +1,60 @@
+-------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneum
+> onia/metaanalysis/metaproppaf21_09_17.smcl
+  log type:  smcl
+ opened on:  21 Sep 2017, 15:11:11
+
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial
+> -pneumonia/metaanalysis/pappaf.csv, clear
+(4 vars, 28 obs)
+
+. gen numround = round(num)
+
+. metaprop numround denom, cimethod(exact) label(namevar=author, yearvar=year) 
+> sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+
+           Study     |     ES    [95% Conf. Interval]     % Weight
+---------------------+---------------------------------------------------
+Xu 2009 (2009)       |      0.08        0.05         0.13   34.69
+Prakash 1987 (1987)  |      0.09        0.02         0.24    4.63
+Hadda 2016 (2016)    |      0.14        0.05         0.30    3.13
+Asamato 1995 (1995)  |      0.15        0.07         0.25    5.94
+Rubin 1980 (1980)    |      0.15        0.02         0.45    1.09
+Fang 2009 (2009)     |      0.18        0.02         0.52    0.81
+Mo 2016 (2016)       |      0.18        0.02         0.52    0.81
+Yang 2014 (2014)     |      0.20        0.03         0.56    0.68
+Deleanu 2016 (2016)  |      0.20        0.06         0.44    1.37
+Fijolek 2014 (2014)  |      0.24        0.07         0.50    1.03
+Akasaka 2015 (2015)  |      0.26        0.12         0.45    1.77
+Inoue 2008 (2008)    |      0.26        0.20         0.33   11.29
+Huang 2016 (2016)    |      0.29        0.10         0.56    0.90
+Kim 1999 (1999)      |      0.33        0.10         0.65    0.59
+McEuen 1978 (1978)   |      0.35        0.20         0.53    1.78
+Campo 2013 (2013)    |      0.36        0.25         0.48    3.49
+Fang 2012 (2012)     |      0.36        0.18         0.57    1.19
+Xiao 2015 (2015)     |      0.38        0.24         0.53    2.10
+Briens 2002 (2002)   |      0.39        0.24         0.55    1.89
+Guo 2017 (2017)      |      0.49        0.32         0.66    1.62
+Bai 2016 (2016)      |      0.50        0.39         0.60    4.43
+Davidson 1969 (1969) |      0.50        0.41         0.58    6.09
+Goldstein 1998 (1998 |      0.50        0.29         0.71    1.05
+Bonella 2011 (2011)  |      0.51        0.39         0.64    3.07
+Ilkovich 2014 (2014) |      0.59        0.46         0.71    3.08
+Zhao 2013 (2013)     |      0.67        0.47         0.83    1.48
+Kariman 1984 (1984)  |  (Excluded)
+Byun 2010 (2010)     |  (Excluded)
+---------------------+---------------------------------------------------
+Fixed pooled  ES     |      0.24        0.22         0.26  100.00
+---------------------+---------------------------------------------------
+
+  Test of ES=0 : z=      23.24 p =       0.00
+
+. 
+. log close
+      name:  <unnamed>
+       log:  /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneum
+> onia/metaanalysis/metaproppaf21_09_17.smcl
+  log type:  smcl
+ closed on:  21 Sep 2017, 15:11:12
+-------------------------------------------------------------------------------
