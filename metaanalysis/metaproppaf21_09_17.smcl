@@ -3,7 +3,7 @@
       name:  {res}<unnamed>
        {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaproppaf21_09_17.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}22 Sep 2017, 15:09:12
+ {txt}opened on:  {res}23 Feb 2018, 12:02:07
 {txt}
 {com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/pappaf.csv, clear
 {res}{text}(4 vars, 28 obs)
@@ -96,7 +96,7 @@ Random pooled  ES{col 22}|{res}      0.04{col 35}      0.02         0.08{col 60}
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaproppaf21_09_17.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}22 Sep 2017, 15:09:15
+ {txt}closed on:  {res}23 Feb 2018, 12:02:09
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}

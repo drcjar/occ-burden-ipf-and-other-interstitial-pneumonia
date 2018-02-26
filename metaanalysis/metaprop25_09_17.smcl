@@ -1,16 +1,16 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaprop25_09_17.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}25 Sep 2017, 08:26:46
-
+ {txt}opened on:  {res}26 Feb 2018, 16:45:52
+{txt}
 {com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/any_paf.csv, clear
 {res}{text}(4 vars, 7 obs)
 
 {com}. gen numround = round(num)
-
-. metaprop numround denom, random cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+{txt}
+{com}. metaprop numround denom, random cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
 
 {txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
@@ -30,13 +30,14 @@ Random pooled  ES{col 22}|{res}      0.23{col 35}      0.11         0.35{col 60}
 {txt}  Estimate of between-study variance Tau^2 = {res}      0.02
 
 {txt}  Test of ES=0 : z= {res}      3.75{txt} p = {res}      0.00
-
-{com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metal_paf.csv, clear
+{txt}
+{com}. 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metal_paf.csv, clear
 {res}{text}(4 vars, 9 obs)
 
 {com}. gen numround = round(num)
-
-. metaprop numround denom, random ftt cimethod(exact)label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+{txt}
+{com}. metaprop numround denom, random ftt cimethod(exact)label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
 
 {txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
@@ -58,161 +59,98 @@ Random pooled  ES{col 22}|{res}      0.08{col 35}      0.04         0.13{col 60}
 {txt}  Estimate of between-study variance Tau^2 = {res}      0.05
 
 {txt}  Test of ES=0 : z= {res}      5.39{txt} p = {res}      0.00
-
+{txt}
 {com}. 
-. log using "/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaprop25_09_17.smcl", replace
-{err}log file already open
-{txt}{search r(604), local:r(604);}
-
-{com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/any_paf.csv, clear
-{res}{text}(4 vars, 7 obs)
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/wood_paf.csv, clear
+{res}{text}(4 vars, 11 obs)
 
 {com}. gen numround = round(num)
-
-. metaprop numround denom, random ftt cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
-
-{txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
----------------------+---------------------------------------------------
-Gustafson (2007){col 22}|{res}      0.06{col 35}      0.02         0.11{col 60} 15.18
-{txt}Garcia-Sancho Figuer{col 22}|{res}      0.09{col 35}      0.04         0.17{col 60} 14.92
-{txt}Scott (1990){col 22}|{res}      0.17{col 35}      0.07         0.33{col 60} 13.82
-{txt}Mullen (1998){col 22}|{res}      0.20{col 35}      0.04         0.48{col 60} 11.48
-{txt}Miyake (2005){col 22}|{res}      0.26{col 35}      0.18         0.36{col 60} 14.96
-{txt}Koo (2017){col 22}|{res}      0.35{col 35}      0.24         0.46{col 60} 14.71
-{txt}Garcia-Sancho (2011){col 22}|{res}      0.50{col 35}      0.40         0.60{col 60} 14.94
-{txt}---------------------+---------------------------------------------------
-Random pooled  ES{col 22}|{res}      0.22{col 35}      0.10         0.37{col 60}100.00
-{txt}---------------------+---------------------------------------------------
-
-  Heterogeneity chi^2 = {res}     87.20{txt} (d.f. = {res}6{txt}) p = {res}      0.00
-{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     93.12%
-{txt}  Estimate of between-study variance Tau^2 = {res}      0.17
-
-{txt}  Test of ES=0 : z= {res}      5.14{txt} p = {res}      0.00
-
-{com}. 
-. metaprop numround denom, random cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+{txt}
+{com}. metaprop numround denom, random ftt cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
 
 {txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
-Gustafson (2007){col 22}|{res}      0.06{col 35}      0.02         0.11{col 60} 15.80
-{txt}Garcia-Sancho Figuer{col 22}|{res}      0.09{col 35}      0.04         0.17{col 60} 15.49
-{txt}Scott (1990){col 22}|{res}      0.17{col 35}      0.07         0.33{col 60} 13.94
-{txt}Mullen (1998){col 22}|{res}      0.20{col 35}      0.04         0.48{col 60} 11.08
-{txt}Miyake (2005){col 22}|{res}      0.26{col 35}      0.18         0.36{col 60} 14.86
-{txt}Koo (2017){col 22}|{res}      0.35{col 35}      0.24         0.46{col 60} 14.31
-{txt}Garcia-Sancho (2011){col 22}|{res}      0.50{col 35}      0.40         0.60{col 60} 14.53
+Paolocci_hard_wood ({col 22}|{res}      0.00{col 35}      0.00         0.06{col 60}  7.35
+{txt}Paolocci_softwood (2{col 22}|{res}      0.02{col 35}      0.00         0.08{col 60}  7.35
+{txt}Gustafson (2007){col 22}|{res}      0.03{col 35}      0.01         0.07{col 60} 11.58
+{txt}Baumgartner (2000){col 22}|{res}      0.03{col 35}      0.01         0.06{col 60} 14.74
+{txt}Miyake (2005){col 22}|{res}      0.04{col 35}      0.01         0.10{col 60}  9.76
+{txt}Koo (2017){col 22}|{res}      0.05{col 35}      0.01         0.13{col 60}  8.29
+{txt}Hubbard (1996){col 22}|{res}      0.06{col 35}      0.03         0.09{col 60} 14.12
+{txt}Awadalla_women (2012{col 22}|{res}      0.06{col 35}      0.02         0.12{col 60}  9.98
+{txt}Mullen (1998){col 22}|{res}      0.07{col 35}      0.00         0.32{col 60}  2.29
+{txt}Awadalla_men (2012){col 22}|{res}      0.09{col 35}      0.04         0.17{col 60}  9.36
+{txt}Scott (1990){col 22}|{res}      0.10{col 35}      0.03         0.24{col 60}  5.17
 {txt}---------------------+---------------------------------------------------
-Random pooled  ES{col 22}|{res}      0.23{col 35}      0.11         0.35{col 60}100.00
-{txt}---------------------+---------------------------------------------------
-
-  Heterogeneity chi^2 = {res}     95.60{txt} (d.f. = {res}6{txt}) p = {res}      0.00
-{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     93.72%
-{txt}  Estimate of between-study variance Tau^2 = {res}      0.02
-
-{txt}  Test of ES=0 : z= {res}      3.75{txt} p = {res}      0.00
-
-{com}. 
-. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/silica_paf.csv, clear
-{res}{text}(4 vars, 8 obs)
-
-{com}. gen numround = round(num)
-
-. metaprop numround denom, random cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
-
-{txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
----------------------+---------------------------------------------------
-Baumgartner (2000){col 22}|{res}      0.03{col 35}      0.01         0.06{col 60} 16.80
-{txt}Gustafson (2007){col 22}|{res}      0.10{col 35}      0.06         0.16{col 60} 15.31
-{txt}Miyake (2005){col 22}|{res}      0.11{col 35}      0.06         0.18{col 60} 14.55
-{txt}Awadalla (2012){col 22}|{res}      0.13{col 35}      0.07         0.21{col 60} 14.05
-{txt}Scott (1990){col 22}|{res}      0.15{col 35}      0.06         0.30{col 60} 10.65
-{txt}Mullen (1998){col 22}|{res}      0.20{col 35}      0.04         0.48{col 60}  5.62
-{txt}Paolocci (2013){col 22}|{res}      0.22{col 35}      0.12         0.33{col 60} 11.45
-{txt}Koo (2017){col 22}|{res}      0.27{col 35}      0.18         0.38{col 60} 11.57
-{txt}---------------------+---------------------------------------------------
-Random pooled  ES{col 22}|{res}      0.14{col 35}      0.08         0.20{col 60}100.00
+Random pooled  ES{col 22}|{res}      0.04{col 35}      0.02         0.06{col 60}100.00
 {txt}---------------------+---------------------------------------------------
 
-  Heterogeneity chi^2 = {res}     44.42{txt} (d.f. = {res}7{txt}) p = {res}      0.00
-{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     84.24%
+  Heterogeneity chi^2 = {res}     17.21{txt} (d.f. = {res}10{txt}) p = {res}      0.07
+{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     41.88%
 {txt}  Estimate of between-study variance Tau^2 = {res}      0.01
 
-{txt}  Test of ES=0 : z= {res}      4.60{txt} p = {res}      0.00
-
-{com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/agri_paf.csv, clear
+{txt}  Test of ES=0 : z= {res}      7.60{txt} p = {res}      0.00
+{txt}
+{com}. 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/agri_paf.csv, clear
 {res}{text}(4 vars, 5 obs)
 
 {com}. gen numround = round(num)
-
-. metaprop numround denom, random ftt cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+{txt}
+{com}. metaprop numround denom, random ftt cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
 
 {txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
-Miyake (2005){col 22}|{res}      0.00{col 35}      0.00         0.04{col 60} 20.12
-{txt}Awadalla (2012){col 22}|{res}      0.00{col 35}      0.00         0.04{col 60} 20.09
-{txt}Baumgartner (2000){col 22}|{res}      0.07{col 35}      0.04         0.11{col 60} 20.33
-{txt}Scott (1990){col 22}|{res}      0.12{col 35}      0.04         0.27{col 60} 19.57
-{txt}Awadalla (2012){col 22}|{res}      0.78{col 35}      0.66         0.87{col 60} 19.90
+Miyake (2005){col 22}|{res}      0.00{col 35}      0.00         0.04{col 60} 20.31
+{txt}Awadalla_men (2012){col 22}|{res}      0.00{col 35}      0.00         0.04{col 60} 20.16
+{txt}Baumgartner (2000){col 22}|{res}      0.07{col 35}      0.04         0.11{col 60} 21.55
+{txt}Scott (1990){col 22}|{res}      0.12{col 35}      0.04         0.27{col 60} 17.60
+{txt}Awadalla_women (2012{col 22}|{res}      0.14{col 35}      0.08         0.22{col 60} 20.38
 {txt}---------------------+---------------------------------------------------
-Random pooled  ES{col 22}|{res}      0.12{col 35}      0.00         0.40{col 60}100.00
+Random pooled  ES{col 22}|{res}      0.04{col 35}      0.00         0.12{col 60}100.00
 {txt}---------------------+---------------------------------------------------
 
-  Heterogeneity chi^2 = {res}    207.52{txt} (d.f. = {res}4{txt}) p = {res}      0.00
-{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     98.07%
-{txt}  Estimate of between-study variance Tau^2 = {res}      0.52
+  Heterogeneity chi^2 = {res}     41.68{txt} (d.f. = {res}4{txt}) p = {res}      0.00
+{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     90.40%
+{txt}  Estimate of between-study variance Tau^2 = {res}      0.09
 
-{txt}  Test of ES=0 : z= {res}      1.88{txt} p = {res}      0.06
-
+{txt}  Test of ES=0 : z= {res}      2.43{txt} p = {res}      0.02
+{txt}
 {com}. 
 . import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/silica_paf.csv, clear
 {res}{text}(4 vars, 8 obs)
 
 {com}. gen numround = round(num)
-
-. metaprop numround denom, random cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
-
-{txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
----------------------+---------------------------------------------------
-Baumgartner (2000){col 22}|{res}      0.03{col 35}      0.01         0.06{col 60} 16.80
-{txt}Gustafson (2007){col 22}|{res}      0.10{col 35}      0.06         0.16{col 60} 15.31
-{txt}Miyake (2005){col 22}|{res}      0.11{col 35}      0.06         0.18{col 60} 14.55
-{txt}Awadalla (2012){col 22}|{res}      0.13{col 35}      0.07         0.21{col 60} 14.05
-{txt}Scott (1990){col 22}|{res}      0.15{col 35}      0.06         0.30{col 60} 10.65
-{txt}Mullen (1998){col 22}|{res}      0.20{col 35}      0.04         0.48{col 60}  5.62
-{txt}Paolocci (2013){col 22}|{res}      0.22{col 35}      0.12         0.33{col 60} 11.45
-{txt}Koo (2017){col 22}|{res}      0.27{col 35}      0.18         0.38{col 60} 11.57
-{txt}---------------------+---------------------------------------------------
-Random pooled  ES{col 22}|{res}      0.14{col 35}      0.08         0.20{col 60}100.00
-{txt}---------------------+---------------------------------------------------
-
-  Heterogeneity chi^2 = {res}     44.42{txt} (d.f. = {res}7{txt}) p = {res}      0.00
-{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     84.24%
-{txt}  Estimate of between-study variance Tau^2 = {res}      0.01
-
-{txt}  Test of ES=0 : z= {res}      4.60{txt} p = {res}      0.00
-
-{com}. 
-. metaprop numround denom, random ftt cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+{txt}
+{com}. metaprop numround denom, random cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
 
 {txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
-Baumgartner (2000){col 22}|{res}      0.03{col 35}      0.01         0.06{col 60} 14.76
-{txt}Gustafson (2007){col 22}|{res}      0.10{col 35}      0.06         0.16{col 60} 14.07
-{txt}Miyake (2005){col 22}|{res}      0.11{col 35}      0.06         0.18{col 60} 13.54
-{txt}Awadalla (2012){col 22}|{res}      0.13{col 35}      0.07         0.21{col 60} 13.40
-{txt}Scott (1990){col 22}|{res}      0.15{col 35}      0.06         0.30{col 60} 11.14
-{txt}Mullen (1998){col 22}|{res}      0.20{col 35}      0.04         0.48{col 60}  7.57
-{txt}Paolocci (2013){col 22}|{res}      0.22{col 35}      0.12         0.33{col 60} 12.54
-{txt}Koo (2017){col 22}|{res}      0.27{col 35}      0.18         0.38{col 60} 12.98
+Awadalla (2012){col 22}|{res}      0.01{col 35}      0.00         0.06{col 60} 23.77
+{txt}Baumgartner (2000){col 22}|{res}      0.02{col 35}      0.01         0.05{col 60} 24.82
+{txt}Gustafson (2007){col 22}|{res}      0.03{col 35}      0.01         0.07{col 60} 18.88
+{txt}Miyake (2005){col 22}|{res}      0.05{col 35}      0.02         0.11{col 60} 11.80
+{txt}Scott (1990){col 22}|{res}      0.05{col 35}      0.01         0.17{col 60}  5.73
+{txt}Koo (2017){col 22}|{res}      0.05{col 35}      0.01         0.13{col 60}  9.50
+{txt}Paolocci (2013){col 22}|{res}      0.11{col 35}      0.04         0.21{col 60}  4.75
+{txt}Mullen (1998){col 22}|{res}      0.20{col 35}      0.04         0.48{col 60}  0.75
 {txt}---------------------+---------------------------------------------------
-Random pooled  ES{col 22}|{res}      0.13{col 35}      0.07         0.21{col 60}100.00
+Random pooled  ES{col 22}|{res}      0.03{col 35}      0.02         0.05{col 60}100.00
 {txt}---------------------+---------------------------------------------------
 
-  Heterogeneity chi^2 = {res}     45.38{txt} (d.f. = {res}7{txt}) p = {res}      0.00
-{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     84.58%
-{txt}  Estimate of between-study variance Tau^2 = {res}      0.06
+  Heterogeneity chi^2 = {res}     12.23{txt} (d.f. = {res}7{txt}) p = {res}      0.09
+{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     42.77%
+{txt}  Estimate of between-study variance Tau^2 = {res}      0.00
 
-{txt}  Test of ES=0 : z= {res}      6.50{txt} p = {res}      0.00
-
+{txt}  Test of ES=0 : z= {res}      3.77{txt} p = {res}      0.00
+{txt}
 {com}. 
+. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaprop25_09_17.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}26 Feb 2018, 16:45:56
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

@@ -1,7 +1,7 @@
 
 1. two rows for Paolocci 2013 for wood because they did soft and hard wood; I'm open to suggestions for a better way of handling this
 
-2. two rows for Awadella 2012 because do men and women
+2. two rows for Awadella 2012 because do men and women and we use occupational group, rather than occupational exposure, for farming.
 
 3. we wrote to Moises Selman, corresponding author for "Garcia-Sancho Figueroa 2010 (Mexico)" and "Garcia-Sancho 2011 (Mexico)", re possible overlap between the studies, he advised 3 cases shared between the two studies
 

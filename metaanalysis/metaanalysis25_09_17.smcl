@@ -1,20 +1,20 @@
 {smcl}
-{txt}{sf}{ul off}{.-}
+{com}{sf}{ul off}{txt}{.-}
       name:  {res}<unnamed>
        {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis25_09_17.smcl
   {txt}log type:  {res}smcl
- {txt}opened on:  {res}25 Sep 2017, 08:12:27
-
+ {txt}opened on:  {res}26 Feb 2018, 16:08:41
+{txt}
 {com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/any_dust.csv, clear
 {res}{text}(5 vars, 7 obs)
 
 {com}. gen lnor=ln(or)
-
-. gen lncilow=ln(cilow)
-
-. gen lnciup=ln(ciup)
-
-. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year)
+{txt}
+{com}. gen lncilow=ln(cilow)
+{txt}
+{com}. gen lnciup=ln(ciup)
+{txt}
+{com}. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year)
 
 {txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
@@ -37,7 +37,7 @@ where variance_i = ((upper limit - lower limit)/(2*z))^2
 {txt}  Estimate of between-study variance Tau-squared = {res} 0.1311
 
 {txt}  Test of ES=1 : z= {res}  2.82{txt} p = {res}0.005
-
+{txt}
 {com}. metabias6 or cilow ciup, graph(egger)
 
 {txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
@@ -63,70 +63,16 @@ Egger's test
 {txt}{hline 13}{c BT}{hline 64}
 
 {com}. 
-. metabias6 or cilow ciup, graph(begg)
-
-{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
-
-Tests for Publication Bias
-
-Begg's Test
-{res} 
-{txt}  adj. Kendall's Score (P-Q) = {res}     11
-{txt}          Std. Dev. of Score = {res}   6.66 
-{txt}           Number of Studies = {res}      7
-{txt}                          z  = {res}   1.65
-{txt}                    Pr > |z| = {res}  0.099
-{txt}                          z  = {res}   1.50{txt} (continuity corrected)
-                    Pr > |z| = {res}  0.133{txt} (continuity corrected)
-
-Egger's test
-{hline 13}{c TT}{hline 64}
-     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
-{hline 13}{c +}{hline 64}
-       slope {c |}  {res}-.3584287   .2935623    -1.22   0.277    -1.113055    .3961972
-        {txt}bias {c |}  {res} 2.721972   .9703657     2.81   0.038     .2275672    5.216376
-{txt}{hline 13}{c BT}{hline 64}
-
-{com}. 
-. 
-. help(metan)
-
-. help(metabias6)
-
-. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year)
-
-{txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
----------------------+---------------------------------------------------
-Scott (1990){col 22}|{res}  1.320{col 35}  0.840     2.040{col 60} 20.78
-{txt}Mullen (1998){col 22}|{res}  2.370{col 35}  0.670     8.440{col 60}  6.90
-{txt}Miyake (2005){col 22}|{res}  5.610{col 35}  2.120    17.890{col 60}  8.87
-{txt}Gustafson (2007){col 22}|{res}  1.100{col 35}  0.710     1.720{col 60} 20.81
-{txt}Garcia-Sancho Figuer{col 22}|{res}  1.200{col 35}  0.800     1.900{col 60} 21.07
-{txt}Garcia-Sancho  (2011{col 22}|{res}  2.800{col 35}  1.500     5.500{col 60} 15.72
-{txt}Koo (2017){col 22}|{res}  2.700{col 35}  0.650    10.930{col 60}  5.83
-{txt}---------------------+---------------------------------------------------
-D+L pooled ES{col 22}|{res}  1.730{col 35}  1.182     2.534{col 60}100.00
-{txt}---------------------+---------------------------------------------------
- Heterogeneity calculated by formula
-  Q = SIGMA_i{ (1/variance_i)*(effect_i - effect_pooled)^2 } 
-where variance_i = ((upper limit - lower limit)/(2*z))^2 
-
-  Heterogeneity chi-squared = {res} 13.81{txt} (d.f. = {res}6{txt}) p = {res}0.032
-{txt}  I-squared (variation in ES attributable to heterogeneity) ={res}  56.6%
-{txt}  Estimate of between-study variance Tau-squared = {res} 0.1311
-
-{txt}  Test of ES=1 : z= {res}  2.82{txt} p = {res}0.005
-
-{com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metal_dust.csv, clear 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metal_dust.csv, clear 
 {res}{text}(5 vars, 9 obs)
 
 {com}. gen lnor=ln(or)
-
-. gen lncilow=ln(cilow)
-
-. gen lnciup=ln(ciup)
-
-. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year)
+{txt}
+{com}. gen lncilow=ln(cilow)
+{txt}
+{com}. gen lnciup=ln(ciup)
+{txt}
+{com}. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year)
 
 {txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
@@ -151,66 +97,42 @@ where variance_i = ((upper limit - lower limit)/(2*z))^2
 {txt}  Estimate of between-study variance Tau-squared = {res} 0.1984
 
 {txt}  Test of ES=1 : z= {res}  3.11{txt} p = {res}0.002
+{txt}
+{com}. metabias6 or cilow ciup, graph(egger)
+
+{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
+
+Tests for Publication Bias
+
+Begg's Test
+{res} 
+{txt}  adj. Kendall's Score (P-Q) = {res}     20
+{txt}          Std. Dev. of Score = {res}   9.59 
+{txt}           Number of Studies = {res}      9
+{txt}                          z  = {res}   2.09
+{txt}                    Pr > |z| = {res}  0.037
+{txt}                          z  = {res}   1.98{txt} (continuity corrected)
+                    Pr > |z| = {res}  0.048{txt} (continuity corrected)
+
+Egger's test
+{hline 13}{c TT}{hline 64}
+     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+       slope {c |}  {res}-.3432828   .3572258    -0.96   0.369    -1.187988    .5014221
+        {txt}bias {c |}  {res} 2.408543   .9049039     2.66   0.032     .2687848      4.5483
+{txt}{hline 13}{c BT}{hline 64}
 
 {com}. 
-. metabias6 or cilow ciup, graph(egger)
-
-{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
-
-Tests for Publication Bias
-
-Begg's Test
-{res} 
-{txt}  adj. Kendall's Score (P-Q) = {res}     20
-{txt}          Std. Dev. of Score = {res}   9.59 
-{txt}           Number of Studies = {res}      9
-{txt}                          z  = {res}   2.09
-{txt}                    Pr > |z| = {res}  0.037
-{txt}                          z  = {res}   1.98{txt} (continuity corrected)
-                    Pr > |z| = {res}  0.048{txt} (continuity corrected)
-
-Egger's test
-{hline 13}{c TT}{hline 64}
-     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
-{hline 13}{c +}{hline 64}
-       slope {c |}  {res}-.3432828   .3572258    -0.96   0.369    -1.187988    .5014221
-        {txt}bias {c |}  {res} 2.408543   .9049039     2.66   0.032     .2687848      4.5483
-{txt}{hline 13}{c BT}{hline 64}
-
-{com}. metabias6 or cilow ciup, graph(begg)
-
-{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
-
-Tests for Publication Bias
-
-Begg's Test
-{res} 
-{txt}  adj. Kendall's Score (P-Q) = {res}     20
-{txt}          Std. Dev. of Score = {res}   9.59 
-{txt}           Number of Studies = {res}      9
-{txt}                          z  = {res}   2.09
-{txt}                    Pr > |z| = {res}  0.037
-{txt}                          z  = {res}   1.98{txt} (continuity corrected)
-                    Pr > |z| = {res}  0.048{txt} (continuity corrected)
-
-Egger's test
-{hline 13}{c TT}{hline 64}
-     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
-{hline 13}{c +}{hline 64}
-       slope {c |}  {res}-.3432828   .3572258    -0.96   0.369    -1.187988    .5014221
-        {txt}bias {c |}  {res} 2.408543   .9049039     2.66   0.032     .2687848      4.5483
-{txt}{hline 13}{c BT}{hline 64}
-
-{com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/wood_dust.csv, clear 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/wood_dust.csv, clear 
 {res}{text}(5 vars, 11 obs)
 
 {com}. gen lnor=ln(or)
-
-. gen lncilow=ln(cilow)
-
-. gen lnciup=ln(ciup)
-
-. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year)
+{txt}
+{com}. gen lncilow=ln(cilow)
+{txt}
+{com}. gen lnciup=ln(ciup)
+{txt}
+{com}. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year)
 
 {txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
@@ -237,66 +159,42 @@ where variance_i = ((upper limit - lower limit)/(2*z))^2
 {txt}  Estimate of between-study variance Tau-squared = {res} 0.0000
 
 {txt}  Test of ES=1 : z= {res}  3.57{txt} p = {res}0.000
+{txt}
+{com}. metabias6 or cilow ciup, graph(egger)
+
+{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
+
+Tests for Publication Bias
+
+Begg's Test
+{res} 
+{txt}  adj. Kendall's Score (P-Q) = {res}     19
+{txt}          Std. Dev. of Score = {res}  12.85 
+{txt}           Number of Studies = {res}     11
+{txt}                          z  = {res}   1.48
+{txt}                    Pr > |z| = {res}  0.139
+{txt}                          z  = {res}   1.40{txt} (continuity corrected)
+                    Pr > |z| = {res}  0.161{txt} (continuity corrected)
+
+Egger's test
+{hline 13}{c TT}{hline 64}
+     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+{hline 13}{c +}{hline 64}
+       slope {c |}  {res} .0838421   .2529189     0.33   0.748    -.4883003    .6559845
+        {txt}bias {c |}  {res}   .99979   .5291462     1.89   0.091    -.1972219    2.196802
+{txt}{hline 13}{c BT}{hline 64}
 
 {com}. 
-. metabias6 or cilow ciup, graph(egger)
-
-{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
-
-Tests for Publication Bias
-
-Begg's Test
-{res} 
-{txt}  adj. Kendall's Score (P-Q) = {res}     19
-{txt}          Std. Dev. of Score = {res}  12.85 
-{txt}           Number of Studies = {res}     11
-{txt}                          z  = {res}   1.48
-{txt}                    Pr > |z| = {res}  0.139
-{txt}                          z  = {res}   1.40{txt} (continuity corrected)
-                    Pr > |z| = {res}  0.161{txt} (continuity corrected)
-
-Egger's test
-{hline 13}{c TT}{hline 64}
-     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
-{hline 13}{c +}{hline 64}
-       slope {c |}  {res} .0838421   .2529189     0.33   0.748    -.4883003    .6559845
-        {txt}bias {c |}  {res}   .99979   .5291462     1.89   0.091    -.1972219    2.196802
-{txt}{hline 13}{c BT}{hline 64}
-
-{com}. metabias6 or cilow ciup, graph(begg)
-
-{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
-
-Tests for Publication Bias
-
-Begg's Test
-{res} 
-{txt}  adj. Kendall's Score (P-Q) = {res}     19
-{txt}          Std. Dev. of Score = {res}  12.85 
-{txt}           Number of Studies = {res}     11
-{txt}                          z  = {res}   1.48
-{txt}                    Pr > |z| = {res}  0.139
-{txt}                          z  = {res}   1.40{txt} (continuity corrected)
-                    Pr > |z| = {res}  0.161{txt} (continuity corrected)
-
-Egger's test
-{hline 13}{c TT}{hline 64}
-     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
-{hline 13}{c +}{hline 64}
-       slope {c |}  {res} .0838421   .2529189     0.33   0.748    -.4883003    .6559845
-        {txt}bias {c |}  {res}   .99979   .5291462     1.89   0.091    -.1972219    2.196802
-{txt}{hline 13}{c BT}{hline 64}
-
-{com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/agricultural_dust.csv, clear 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/agricultural_dust.csv, clear 
 {res}{text}(5 vars, 5 obs)
 
 {com}. gen lnor=ln(or)
-
-. gen lncilow=ln(cilow)
-
-. gen lnciup=ln(ciup)
-
-. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year) 
+{txt}
+{com}. gen lncilow=ln(cilow)
+{txt}
+{com}. gen lnciup=ln(ciup)
+{txt}
+{com}. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year) 
 
 {txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
@@ -317,7 +215,7 @@ where variance_i = ((upper limit - lower limit)/(2*z))^2
 {txt}  Estimate of between-study variance Tau-squared = {res} 0.2685
 
 {txt}  Test of ES=1 : z= {res}  1.40{txt} p = {res}0.162
-
+{txt}
 {com}. metabias6 or cilow ciup, graph(egger)
 
 {txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
@@ -342,40 +240,17 @@ Egger's test
         {txt}bias {c |}  {res} .6926746   1.609654     0.43   0.696    -4.429963    5.815313
 {txt}{hline 13}{c BT}{hline 64}
 
-{com}. metabias6 or cilow ciup, graph(begg)
-
-{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
-
-Tests for Publication Bias
-
-Begg's Test
-{res} 
-{txt}  adj. Kendall's Score (P-Q) = {res}      2
-{txt}          Std. Dev. of Score = {res}   4.08 
-{txt}           Number of Studies = {res}      5
-{txt}                          z  = {res}   0.49
-{txt}                    Pr > |z| = {res}  0.624
-{txt}                          z  = {res}   0.24{txt} (continuity corrected)
-                    Pr > |z| = {res}  0.806{txt} (continuity corrected)
-
-Egger's test
-{hline 13}{c TT}{hline 64}
-     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
-{hline 13}{c +}{hline 64}
-       slope {c |}  {res} .1770363     .65053     0.27   0.803     -1.89324    2.247313
-        {txt}bias {c |}  {res} .6926746   1.609654     0.43   0.696    -4.429963    5.815313
-{txt}{hline 13}{c BT}{hline 64}
-
-{com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/silica_dust.csv, clear 
+{com}. 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/silica_dust.csv, clear 
 {res}{text}(5 vars, 8 obs)
 
 {com}. gen lnor=ln(or)
-
-. gen lncilow=ln(cilow)
-
-. gen lnciup=ln(ciup)
-
-. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year) 
+{txt}
+{com}. gen lncilow=ln(cilow)
+{txt}
+{com}. gen lnciup=ln(ciup)
+{txt}
+{com}. metan lnor lncilow lnciup, eform random label(namevar=author, yearvar=year) 
 
 {txt}{col 12}Study{col 22}|{col 24}{col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
 ---------------------+---------------------------------------------------
@@ -399,33 +274,8 @@ where variance_i = ((upper limit - lower limit)/(2*z))^2
 {txt}  Estimate of between-study variance Tau-squared = {res} 0.0000
 
 {txt}  Test of ES=1 : z= {res}  2.95{txt} p = {res}0.003
-
-{com}. 
-. metabias6 or cilow ciup, graph(egger)
-
-{txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
-
-Tests for Publication Bias
-
-Begg's Test
-{res} 
-{txt}  adj. Kendall's Score (P-Q) = {res}     16
-{txt}          Std. Dev. of Score = {res}   8.08 
-{txt}           Number of Studies = {res}      8
-{txt}                          z  = {res}   1.98
-{txt}                    Pr > |z| = {res}  0.048
-{txt}                          z  = {res}   1.86{txt} (continuity corrected)
-                    Pr > |z| = {res}  0.063{txt} (continuity corrected)
-
-Egger's test
-{hline 13}{c TT}{hline 64}
-     Std_Eff {c |}      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
-{hline 13}{c +}{hline 64}
-       slope {c |}  {res}-.3162402   .4457427    -0.71   0.505    -1.406933    .7744528
-        {txt}bias {c |}  {res}  1.76092    .892413     1.97   0.096     -.422736    3.944576
-{txt}{hline 13}{c BT}{hline 64}
-
-{com}. metabias6 or cilow ciup, graph(begg)
+{txt}
+{com}. metabias6 or cilow ciup, graph(egger)
 
 {txt}Warning: varlist has 3 variables but option 'ci' not specified; 'ci' assumed.
 
@@ -448,16 +298,12 @@ Egger's test
        slope {c |}  {res}-.3162402   .4457427    -0.71   0.505    -1.406933    .7744528
         {txt}bias {c |}  {res}  1.76092    .892413     1.97   0.096     -.422736    3.944576
 {txt}{hline 13}{c BT}{hline 64}
-
-{com}. log using "/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaprop25_09_17.smcl", replace
-{err}log file already open
-{txt}{search r(604), local:r(604);}
 
 {com}. log close
       {txt}name:  {res}<unnamed>
        {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaanalysis25_09_17.smcl
   {txt}log type:  {res}smcl
- {txt}closed on:  {res}25 Sep 2017, 08:26:40
+ {txt}closed on:  {res}26 Feb 2018, 16:08:46
 {txt}{.-}
 {smcl}
 {txt}{sf}{ul off}
