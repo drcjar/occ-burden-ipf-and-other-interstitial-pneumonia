@@ -1,0 +1,102 @@
+{smcl}
+{com}{sf}{ul off}{txt}{.-}
+      name:  {res}<unnamed>
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaproppaf24_10_18.smcl
+  {txt}log type:  {res}smcl
+ {txt}opened on:  {res}16 Feb 2019, 21:43:16
+{txt}
+{com}. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/pappaf-outliers-removed.csv, clear
+{res}{text}(4 vars, 27 obs)
+
+{com}. gen numround = round(num)
+{txt}
+{com}. 
+. metaprop numround denom, random ftt cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+
+{txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+Byun 2010 (2010){col 22}|{res}      0.00{col 35}      0.00         0.09{col 60}  3.85
+{txt}Xu 2009 (2009){col 22}|{res}      0.08{col 35}      0.05         0.13{col 60}  4.37
+{txt}Prakash 1987 (1987){col 22}|{res}      0.09{col 35}      0.02         0.24{col 60}  3.79
+{txt}Hadda 2016 (2016){col 22}|{res}      0.14{col 35}      0.05         0.30{col 60}  3.80
+{txt}Asamato 1995 (1995){col 22}|{res}      0.15{col 35}      0.07         0.25{col 60}  4.10
+{txt}Rubin 1980 (1980){col 22}|{res}      0.15{col 35}      0.02         0.45{col 60}  3.05
+{txt}Fang 2009 (2009){col 22}|{res}      0.18{col 35}      0.02         0.52{col 60}  2.89
+{txt}Mo 2016 (2016){col 22}|{res}      0.18{col 35}      0.02         0.52{col 60}  2.89
+{txt}Yang 2014 (2014){col 22}|{res}      0.20{col 35}      0.03         0.56{col 60}  2.80
+{txt}Deleanu 2016 (2016){col 22}|{res}      0.20{col 35}      0.06         0.44{col 60}  3.42
+{txt}Fijolek 2014 (2014){col 22}|{res}      0.24{col 35}      0.07         0.50{col 60}  3.29
+{txt}Akasaka 2015 (2015){col 22}|{res}      0.26{col 35}      0.12         0.45{col 60}  3.73
+{txt}Inoue 2008 (2008){col 22}|{res}      0.26{col 35}      0.20         0.33{col 60}  4.34
+{txt}Huang 2016 (2016){col 22}|{res}      0.29{col 35}      0.10         0.56{col 60}  3.29
+{txt}McEuen 1978 (1978){col 22}|{res}      0.35{col 35}      0.20         0.53{col 60}  3.83
+{txt}Campo 2013 (2013){col 22}|{res}      0.36{col 35}      0.25         0.48{col 60}  4.13
+{txt}Fang 2012 (2012){col 22}|{res}      0.36{col 35}      0.18         0.57{col 60}  3.59
+{txt}Xiao 2015 (2015){col 22}|{res}      0.38{col 35}      0.24         0.53{col 60}  3.93
+{txt}Briens 2002 (2002){col 22}|{res}      0.39{col 35}      0.24         0.55{col 60}  3.89
+{txt}Kim 1999 (1999){col 22}|{res}      0.40{col 35}      0.12         0.74{col 60}  2.80
+{txt}Hwang 2017 (2017){col 22}|{res}      0.48{col 35}      0.36         0.60{col 60}  4.12
+{txt}Guo 2017 (2017){col 22}|{res}      0.49{col 35}      0.32         0.66{col 60}  3.83
+{txt}Bai 2016 (2016){col 22}|{res}      0.50{col 35}      0.39         0.60{col 60}  4.22
+{txt}Davidson 1969 (1969){col 22}|{res}      0.50{col 35}      0.41         0.58{col 60}  4.29
+{txt}Goldstein 1998 (1998{col 22}|{res}      0.50{col 35}      0.29         0.71{col 60}  3.56
+{txt}Bonella 2011 (2011){col 22}|{res}      0.51{col 35}      0.39         0.64{col 60}  4.11
+{txt}Ilkovich 2014 (2014){col 22}|{res}      0.59{col 35}      0.46         0.71{col 60}  4.10
+{txt}---------------------+---------------------------------------------------
+Random pooled  ES{col 22}|{res}      0.29{col 35}      0.22         0.37{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+
+  Heterogeneity chi^2 = {res}    245.47{txt} (d.f. = {res}26{txt}) p = {res}      0.00
+{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     89.41%
+{txt}  Estimate of between-study variance Tau^2 = {res}      0.16
+
+{txt}  Test of ES=0 : z= {res}     11.52{txt} p = {res}      0.00
+{txt}
+{com}. 
+. import delimited /home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/papsilicapaf-outliers-removed.csv, clear
+{res}{text}(4 vars, 18 obs)
+
+{com}. gen numround = round(num)
+{txt}
+{com}. 
+. metaprop numround denom, random ftt cimethod(exact) label(namevar=author, yearvar=year) sortby(_ES) xlab(.25,.5,.75,1) xtitle(Proportion)
+
+{txt}{col 12}Study{col 22}|{col 24} {col 28}ES{col 34}[95% Conf. Interval]{col 59}% Weight
+---------------------+---------------------------------------------------
+Kariman 1984 (1984){col 22}|{res}      0.00{col 35}      0.00         0.15{col 60}  4.37
+{txt}Goldstein 1998 (1998{col 22}|{res}      0.00{col 35}      0.00         0.14{col 60}  4.50
+{txt}Kim 1999 (1999){col 22}|{res}      0.00{col 35}      0.00         0.31{col 60}  2.36
+{txt}Byun 2010 (2010){col 22}|{res}      0.00{col 35}      0.00         0.09{col 60}  5.99
+{txt}Fijolek 2014 (2014){col 22}|{res}      0.00{col 35}      0.00         0.20{col 60}  3.53
+{txt}Huang 2016 (2016){col 22}|{res}      0.00{col 35}      0.00         0.20{col 60}  3.53
+{txt}Guo 2017 (2017){col 22}|{res}      0.00{col 35}      0.00         0.09{col 60}  5.90
+{txt}Asamoto 1995 (1995){col 22}|{res}      0.03{col 35}      0.00         0.10{col 60}  8.02
+{txt}Deleanu 2016 (2016){col 22}|{res}      0.05{col 35}      0.00         0.25{col 60}  3.97
+{txt}Hadda 2016 (2016){col 22}|{res}      0.06{col 35}      0.01         0.19{col 60}  5.71
+{txt}Prakash 1987 (1987){col 22}|{res}      0.06{col 35}      0.01         0.20{col 60}  5.61
+{txt}Davidson 1969 (1969){col 22}|{res}      0.07{col 35}      0.04         0.13{col 60} 10.29
+{txt}Briens 2002 (2002){col 22}|{res}      0.07{col 35}      0.02         0.20{col 60}  6.25
+{txt}Fang 2009 (2009){col 22}|{res}      0.09{col 35}      0.00         0.41{col 60}  2.54
+{txt}Hwang 2017 (2017){col 22}|{res}      0.10{col 35}      0.04         0.19{col 60}  8.16
+{txt}Bonella 2011 (2011){col 22}|{res}      0.11{col 35}      0.05         0.21{col 60}  8.12
+{txt}Campo 2013 (2013){col 22}|{res}      0.14{col 35}      0.07         0.24{col 60}  8.26
+{txt}Rubin 1980 (1980){col 22}|{res}      0.15{col 35}      0.02         0.45{col 60}  2.89
+{txt}---------------------+---------------------------------------------------
+Random pooled  ES{col 22}|{res}      0.04{col 35}      0.02         0.07{col 60}100.00
+{txt}---------------------+---------------------------------------------------
+
+  Heterogeneity chi^2 = {res}     29.98{txt} (d.f. = {res}17{txt}) p = {res}      0.03
+{txt}  I^2 (variation in ES attributable to heterogeneity) ={res}     43.29%
+{txt}  Estimate of between-study variance Tau^2 = {res}      0.02
+
+{txt}  Test of ES=0 : z= {res}      5.55{txt} p = {res}      0.00
+{txt}
+{com}. 
+. log close
+      {txt}name:  {res}<unnamed>
+       {txt}log:  {res}/home/drcjar/Documents/occ-burden-ipf-and-other-interstitial-pneumonia/metaanalysis/metaproppaf24_10_18.smcl
+  {txt}log type:  {res}smcl
+ {txt}closed on:  {res}16 Feb 2019, 21:43:19
+{txt}{.-}
+{smcl}
+{txt}{sf}{ul off}

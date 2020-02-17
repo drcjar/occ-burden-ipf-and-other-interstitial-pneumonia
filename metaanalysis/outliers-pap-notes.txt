@@ -1,0 +1,11 @@
+metaprop pap
+remove outliers:
+Kariman 1984 (ES 0)
+Zhao 2013 (ES 0.67)
+Random pooled ES 0.29 (0.22-0.37)
+ 
+metaprop pap silica only 
+remove outliers:
+Kariman 1984 (ES 0)
+Xiao 2015 (ES 0.22)
+Random pooled  ES 0.04 (0.02-0.07) 
